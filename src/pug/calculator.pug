@@ -1,0 +1,119 @@
+extends _layout
+
+block content
+    main#barba-wrapper
+        section.barba-container
+            section.container-wrapper-header-title
+                //.block-img(data-parallax="scroll" data-image-src="img/bg/bg-equipment.png")
+                .block-img(style="background-image:url('img/bg/bg-com-proj.jpg')")
+                .block-wrapper-title
+                    .block-wrapper-title_title-bread-crumbs
+                        h1 Калькулятор окупаемости
+                        .bread-crumbs
+                            a(href='#') Главная
+                            a(href='#') Эффективность
+                            span Калькулятор окупаемости
+
+            section.container-wrapper-card-product
+                .wrapper-card-product
+                    .wrapper-card-product_left
+                        .wrapper-card-product_left-menu
+                            .block-product-menu
+                                a(href='#').block-product-menu_title Как это работает
+                            .block-product-menu
+                                a(href='#').block-product-menu_title Экспертные советы
+                            .block-product-menu
+                                a(href='#').block-product-menu_title Реализованные проекты
+                            .block-product-menu
+                                a(href='#').block-product-menu_title Отзывы
+                            .block-product-menu
+                                a(href='#').block-product-menu_title.active-block Калькулятор окупаемости
+
+
+
+                    .wrapper-contant-right
+                        .wrapper-content-right
+                            .wrapper-content-right_txt
+                                .wrapper-container_title Рассчитать окупаемость с системами мониторинга omnicom
+
+                                .wrapper-calculator
+                                    .container-calculator
+                                        h3 Калькулятор окупаемости
+                                        form.container-calculator-form
+                                            .block-img-equipment
+                                                img(src='img/calculator/agricultural-equipment.png')
+                                            .container-label-sel
+                                                .block-label-sel-50
+                                                    label.box-label Вид техники
+                                                    .box-select
+                                                        select.select2(style="width: 100%")
+                                                            option(value='1') Сельхозтехника
+                                                            option(value='2') Дорожно-стоительная техника
+                                                            option(value='3') Грузовики
+                                                            option(value='4') Автобусы
+                                                            option(value='5') Коммунальная техника
+                                                            option(value='6') Лесозаготовительная техника
+                                                            option(value='7') Спецтехника
+                                                            option(value='8') Погрузчики
+                                                .block-label-sel-50
+                                                    label.box-label Вид техники
+                                                    .box-select
+                                                        select.select2(style="width: 100%")
+                                                            option(value='1') Трактор колесный
+                                                            option(value='2') Трактор гусеничный
+                                                            option(value='3') Комбайн
+
+                                            .container-label-input
+                                                .block-label-input-25
+                                                    label.box-label Количество техники
+                                                    .box-input
+                                                        input(type='txt')
+                                                .block-label-input-25
+                                                    label.box-label Ежемесячный пробег
+                                                    .box-input
+                                                        input(type='txt')
+                                                .block-label-input-25
+                                                    label.box-label Стоимость 1 л топлива
+                                                    .box-input
+                                                        input(type='txt')
+                                                .block-label-input-25
+                                                    label.box-label Стоимость оснащения
+                                                    .box-input
+                                                        input(type='txt')
+
+                                            .box-btn-form
+                                                button.btn-form Рассчитать окупаемость
+
+                                    .container-fuel-control
+                                        .wrapper-advantage-btn
+                                            .wrapper-advantage-btn_blue
+                                                .icon-priemyschestva
+                                                    <svg width="30" height="30" xmlns="http://www.w3.org/2000/svg">
+                                                    <g>
+                                                    <title>Layer 1</title>
+                                                    <path id="svg_1" d="m15,0c-8.3,0 -15,6.7 -15,15s6.7,15 15,15s15,-6.7 15,-15s-6.7,-15 -15,-15zm-3.6,21.8l-5.8,-5.8l0,0l0.8,-0.8l5,5l11.6,-11.6l0.8,0.8l-12.4,12.4z" class="st0"/>
+                                                    </g>
+                                                    </svg>
+                                                span С контролем топлива
+                                            .wrapper-advantage-btn_white Без контроля топлива
+
+                                        .wrapper-final-result
+                                            .wrapper-final-result_box
+                                                .wrapper-final-result_box_t Экономия за месяц
+                                                .wrapper-final-result_box_r 226 800
+                                                    span руб
+
+                                            .wrapper-final-result_box
+                                                .wrapper-final-result_box_t Срок окупаемости
+                                                .wrapper-final-result_box_r 6
+                                                    span месяцев
+
+                                            .wrapper-final-result_box
+                                                .wrapper-final-result_box_t Экономия за год
+                                                .wrapper-final-result_box_r 2 721 600
+                                                    span руб
+
+                                        a.btn-book(href='javascript:;' data-fancybox data-src='#hidden-consultation') Получить консультацию
+
+                                .block-text-info Расчет носит приблизительный характер, т.к. на практике экономия средств и окупаемость системы зависят от многих параметров и особенностей эксплуатации транспорта. Данные для расчета основаны на внутренней статистике компании Omnicomm.
+
