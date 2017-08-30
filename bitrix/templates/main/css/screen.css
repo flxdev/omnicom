@@ -4238,20 +4238,26 @@ h1 {
     width: 120px;
     height: 105px;
     margin: 30px auto 0 auto; }
-    .wrapp_menu_categories-content .menu-list-box .icon-datch-omnicom .st0 {
-      fill: #26486e; }
+    .wrapp_menu_categories-content .menu-list-box .icon-datch-omnicom svg {
+      fill: #002855; }
+    .wrapp_menu_categories-content .menu-list-box .icon-datch-omnicom path {
+      fill: #002855; }
   .wrapp_menu_categories-content .menu-list-box .icon_terminal-omnicom {
     width: 110px;
     height: 90px;
     margin: 30px auto 15px auto; }
-    .wrapp_menu_categories-content .menu-list-box .icon_terminal-omnicom .st0 {
-      fill: #26486e; }
+    .wrapp_menu_categories-content .menu-list-box .icon_terminal-omnicom svg {
+      fill: #002855; }
+    .wrapp_menu_categories-content .menu-list-box .icon_terminal-omnicom path {
+      fill: #002855; }
   .wrapp_menu_categories-content .menu-list-box .icon_dop-omnicom {
     width: 110px;
     height: 105px;
     margin: 30px auto 0 auto; }
-    .wrapp_menu_categories-content .menu-list-box .icon_dop-omnicom .st0 {
-      fill: #26486e; }
+    .wrapp_menu_categories-content .menu-list-box .icon_dop-omnicom svg {
+      fill: #002855; }
+    .wrapp_menu_categories-content .menu-list-box .icon_dop-omnicom path {
+      fill: #002855; }
 
 .container-wrapper-header-title {
   width: 100%;
