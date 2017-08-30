@@ -1,0 +1,65 @@
+section.container-wrapper-ordering
+    .wrapper-ordering
+        .wrapper-container_title Оформление заказа
+        .wrapper-ordering-advantage
+            .wrapper-ordering-advantage_title Преимущества
+            .wrapper-ordering-advantage_list
+                ul
+                    li.revealator-slideright Подключение за 1 рабочий день
+                    li.revealator-slideright.revealator-delay2 Выезда специалиста “завтра”
+                    li.revealator-slideright.revealator-delay4 Компенсируем стоимость перехода
+                    li.revealator-slideright.revealator-delay6 Первый месяц бесплатное обслуживание
+                    li.revealator-slideright.revealator-delay8 Никаких подводных камней
+
+        .wrapper-ordering-form
+            .wrapper-ordering-form_form
+                form.js-form
+                    .box-input
+                        .form-label
+                            label.input-label ФИО<span>*</span>
+                        .form-input
+                            input(data-validation="required" type="txt" data-validation-error-msg="Name is not correct").input-box
+
+                    .box-input
+                        .form-label
+                            label.input-label Организация
+                        .form-input
+                            input(type="txt").input-box
+
+                    .box-input
+                        .form-label
+                            label.input-label Телефон<span>*</span>
+                        .form-input
+                            input(data-validation="required" type="txt" data-validation-error-msg="Name is not correct").input-box
+
+                    .box-input
+                        .form-label
+                            label.input-label E-mail<span>*</span>
+                        .form-input
+                            input(data-validation="email required" type="txt" data-validation-error-msg="Name is not correct").input-box
+
+                    .box-input-t
+                        .box-input.w-80
+                            .form-label
+                                label.input-label Наименование товара
+                            .form-input
+                                input(type="txt").input-box
+                        .box-input.w-20
+                            .form-label
+                                label.input-label Количество
+                            .form-input
+                                input(type="txt").input-box
+
+                    .box-input
+                        .form-label
+                            label.input-label Комментарий
+                        .form-input
+                            textarea(data-validation="required" type="text" data-validation-error-msg="Message is not correct").input-box.textarea-box
+
+                    .box-check
+                        .input-wrapp
+                            input.ch(type='checkbox' id='m')
+                            label(for='m') Даю согласие на обработку моих <a href="#"> <span> персональных данных *</span> </a>
+
+                    .box-btn-form
+                        button.btn-form Отправить заявку

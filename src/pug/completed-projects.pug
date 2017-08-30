@@ -1,0 +1,121 @@
+extends _layout
+
+block content
+    main#barba-wrapper
+        section.barba-container
+            section.container-wrapper-header-title
+                //.block-img(data-parallax="scroll" data-image-src="img/bg/bg-equipment.png")
+                .block-img(style="background-image:url('img/bg/bg-com-proj.jpg')")
+                .block-wrapper-title
+                    .block-wrapper-title_title-bread-crumbs
+                        h1 Реализованные проекты
+                        .bread-crumbs
+                            a(href='#') Главная
+                            a(href='#') Эффективность
+                            span Реализованные проекты
+
+            section.container-wrapper-card-product
+                .wrapper-card-product
+                    .wrapper-card-product_left
+                        .wrapper-card-product_left-menu
+                            .block-product-menu
+                                a(href='#').block-product-menu_title Как это работает
+                            .block-product-menu
+                                a(href='#').block-product-menu_title Экспертные советы
+                            .block-product-menu
+                                a(href='#').block-product-menu_title.active-block Реализованные проекты
+                            .block-product-menu
+                                a(href='#').block-product-menu_title Отзывы
+                            .block-product-menu
+                                a(href='#').block-product-menu_title Калькулятор окупаемости
+
+                        .wrapper-online_left
+                            .wrapper-online_left-img
+                                img(src='img/telefon.png' alt='')
+                            .wrapper-online_left-txt Сервис Omnicomm Online, мобильные приложения <a href="#"><span>Google Play</span></a>, <a href="#"><span>AppStore</span></a>
+                            a(href="#").link-app
+                                img(src="img/link-app.png")
+                            a(href="#").link-google
+                                img(src="img/link-google.png")
+
+
+
+                    .wrapper-contant-right
+                        .wrapper-content-right
+                            .wrapper-news-list
+                                a(href='#').wrapper-news-list_item
+                                    .swiper-block-content-img(style='background-image:url("img/slider-r/slider-31.jpg")')
+                                        .swiper-block-content-block-left
+                                            .swiper-block-content-img_name Centar Azia Cement
+                                            .swiper-block-content-img_structure Цементная компания
+                                        .swiper-block-content-block-right
+                                            .swiper-block-content-img_rew
+                                                img(src='img/slider-r/reviews-1.jpg')
+                                    .swiper-block-content
+                                        .swiper-block-content_number
+                                            span.number 30%
+                                            span.txt Экономия<br>топлива
+                                        .swiper-block-content_txt 1500 единиц наземной спецтехники оснащены датчиками уровня топлива Omnicomm LLS 30160 и навигационными терминалами Omnicomm Profi.
+
+
+                                a(href='#').wrapper-news-list_item
+                                    .swiper-block-content-img(style='background-image:url("img/slider-r/slider-33.jpg")')
+                                        .swiper-block-content-block-left
+                                            .swiper-block-content-img_logo
+                                                img(src='img/slider-r/slider-icon-company.png')
+                                        .swiper-block-content-block-right
+                                            .swiper-block-content-img_rew
+                                                img(src='img/slider-r/reviews-1.jpg')
+                                    .swiper-block-content
+                                        .swiper-block-content_number
+                                            span.number 10%
+                                            span.txt Снижение<br>пробега
+                                        .swiper-block-content_txt 1500 единиц наземной спецтехники оснащены датчиками уровня топлива Omnicomm LLS 30160 и навигационными терминалами Omnicomm Profi.
+
+
+                                a(href='#').wrapper-news-list_item
+                                    .swiper-block-content-img(style='background-image:url("img/slider-r/slider-34.jpg")')
+                                        .swiper-block-content-block-left
+                                            .swiper-block-content-img_name Мурманский
+                                            .swiper-block-content-img_structure Морской порт
+                                        .swiper-block-content-block-right
+                                            .swiper-block-content-img_rew
+                                                img(src='img/slider-r/reviews-1.jpg')
+                                    .swiper-block-content
+                                        .swiper-block-content_number
+                                            span.number 2155 л.
+                                            span.txt топлива Сэкономлено <br> в первый месяц
+                                        .swiper-block-content_txt Длина и глубина причалов позволяют принимать и ставить под грузовые операции суда с осадкой до 15,5 метров, длиной более 265 метров и дедвейтом до 150 000 тонн.
+
+                            .container-btn-navigation
+                                ul
+                                    li.btn-prev.no-active
+                                        a(href='#')
+                                            <svg width="9" height="16" xmlns="http://www.w3.org/2000/svg">
+                                            <g stroke="null" id="svg_1">
+                                            <g stroke="null" id="svg_2">
+                                            <polygon stroke="null" class="st0" points="0.22357527309955216,1.240086555480957 6.558207892465759,7.828046798706055 0,14.64852237701416 1.1924014269173355,15.888608932495117 8.943010568618774,7.828046798706055 1.4159767444373017,0 0.22357527309955216,1.240086555480957 " id="svg_3"/>
+                                            </g>
+                                            </g>
+                                            </g>
+                                            </svg>
+                                    li.number.active
+                                        a(href='#') 1
+                                    li.number
+                                        a(href='#') 2
+                                    li.interval
+                                        a(href='#') ...
+                                    li.number
+                                        a(href='#') 12
+                                    li.btn-next
+                                        a(href='#')
+                                            <svg width="9" height="16" xmlns="http://www.w3.org/2000/svg">
+                                            <g stroke="null" id="svg_1">
+                                            <g stroke="null" id="svg_2">
+                                            <polygon stroke="null" class="st0" points="0.22357527309955216,1.240086555480957 6.558207892465759,7.828046798706055 0,14.64852237701416 1.1924014269173355,15.888608932495117 8.943010568618774,7.828046798706055 1.4159767444373017,0 0.22357527309955216,1.240086555480957 " id="svg_3"/>
+                                            </g>
+                                            </g>
+                                            </g>
+                                            </svg>
+
+

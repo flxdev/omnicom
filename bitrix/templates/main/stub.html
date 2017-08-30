@@ -1,0 +1,70 @@
+
+<html>
+  <head>
+    <meta charset="utf-8"/>
+    <title>Jade Layout Template</title>
+    <meta name="viewport" content="width=device-width,initial-scale=1,user-scalable=no"/>
+    <meta content="IE=Edge" http-equiv="X-UA-Compatible"/>
+    <link rel="stylesheet" media="all" href="css/font.css"/>
+    <link rel="stylesheet" media="all" href="css/screen.min.css"/>
+  </head>
+  <body class="wrapper-stub" style="background-image:url(&quot;img/bg/bg-z.png&quot;);">
+    <script type="text/javascript">
+      function checkForFlex() {
+          var curAddress = window.location.toString(),
+              // поменять ссылку
+              targetAddress = "/old_browser.php";
+      
+          function NaiveFlexBoxSupport(d) {
+              var f = "flex", e = d.createElement('b');
+              e.style.display = f;
+              return e.style.display == f;
+          }
+      
+          if (document.addEventListener) {
+          } else {
+              window.location.replace(targetAddress);
+          }
+          if (NaiveFlexBoxSupport(document) == false && (targetAddress.toString() != curAddress)) {
+              window.location.replace(targetAddress);
+          }
+      
+      }checkForFlex();
+    </script>
+    <div class="container-stub">
+      <div class="container-stub_wrapper">
+        <div class="stub-wrapper_logo-dealer">
+          <div class="stub-wrapper_logo">Omnicomm kazakstan</div>
+          <div class="stub-wrapper_dealer"><span class="icon-dealer"><svg width="30" height="30" xmlns="http://www.w3.org/2000/svg">
+<style type="text/css">.st0{fill:#F64224;}</style>
+<g>
+<path id="svg_1" d="m15,0c-8.3,0 -15,6.7 -15,15s6.7,15 15,15s15,-6.7 15,-15s-6.7,-15 -15,-15zm5.5,22.9l-5.5,-2.9l-5.5,2.9l1.1,-6.2l-4.6,-4.3l6.2,-0.9l2.8,-5.6l2.8,5.6l6.2,0.9l-4.5,4.4l1,6.1z" class="st0"/>
+</g>
+</svg></span><span class="txt">Золотой <br> дилер</span></div>
+        </div>
+        <div class="stub-logo-comp"><img src="img/logo-z.png" alt=""/></div>
+        <div class="stub-title">К сожалению, <br> ваш браузер устарел</div>
+        <div class="stub-txt">Мы рады приветствовать вас на сайте «Омникомм Казахстан»! <br> К сожалению, ваш браузер устарел и не может отобразить наш сайт корректно.</div>
+        <div class="stub-list-browser">
+          <div class="stub-list-browser_txt">Пожалуйста, обновите ваш браузер:</div>
+          <ul>
+            <li><a href="#">Google Chrome</a></li>
+            <li><a href="#">Apple Safari</a></li>
+            <li><a href="#">Mozilla Firefox</a></li>
+            <li><a href="#">Opera</a></li>
+            <li><a href="#">Internet Explorer</a></li>
+          </ul>
+        </div>
+        <div class="stub-tel">
+          <div class="stub-tel_t">8 (800) 100-24-42</div>
+          <div class="stub-tel_l">Бесплатный звонок из любого региона РФ</div>
+        </div><a class="stub-email" href="#">info@omnicomm.kz</a>
+        <div class="stub-adress">г. Екатеринбург, пр. Бухар-Жырау, 82</div>
+      </div>
+      <div class="stub-footer">
+        <div class="stub-footer-l">© 2017, Omnicomm</div>
+        <div class="stub-footer-r"><a href="#">Разработка сайта:<span>FLEX.MEDIA</span></a></div>
+      </div>
+    </div>
+  </body>
+</html>

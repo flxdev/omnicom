@@ -1,0 +1,395 @@
+<!DOCTYPE html>
+<html lang="ru" xmlns="http://www.w3.org/1999/xhtml" xmlns:v="urn:schemas-microsoft-com:vml" xmlns:o="urn:schemas-microsoft-com:office:office">
+<head>
+    <meta charset="utf-8"> <!-- utf-8 works for most cases -->
+    <meta name="viewport" content="width=device-width"> <!-- Forcing initial-scale shouldn't be necessary -->
+    <meta http-equiv="X-UA-Compatible" content="IE=edge"> <!-- Use the latest (edge) version of IE rendering engine -->
+    <meta name="x-apple-disable-message-reformatting">  <!-- Disable auto-scale in iOS 10 Mail entirely -->
+    <title></title> <!-- The title tag shows in email notifications, like Android 4.4. -->
+
+    <!-- Web Font / @font-face : BEGIN -->
+    <!-- NOTE: If web fonts are not required, lines 10 - 27 can be safely removed. -->
+
+    <!-- Desktop Outlook chokes on web font references and defaults to Times New Roman, so we force a safe fallback font. -->
+    <!--[if mso]>
+    <style>
+        * {
+            font-family: sans-serif !important;
+        }
+    </style>
+    <![endif]-->
+
+    <!-- All other clients get the webfont reference; some will render the font and others will silently fail to the fallbacks. More on that here: http://stylecampaign.com/blog/2015/02/webfont-support-in-email/ -->
+    <!--[if !mso]><!-->
+    <!-- insert web font reference, eg: <link href='https://fonts.googleapis.com/css?family=Roboto:400,700' rel='stylesheet' type='text/css'> -->
+    <!--<![endif]-->
+
+    <!-- Web Font / @font-face : END -->
+
+    <!-- CSS Reset -->
+    <style>
+
+        /* What it does: Remove spaces around the email design added by some email clients. */
+        /* Beware: It can remove the padding / margin and add a background color to the compose a reply window. */
+        html,
+        body {
+            margin: 0 auto !important;
+            padding: 0 !important;
+            height: 100% !important;
+            width: 100% !important;
+        }
+
+        /* What it does: Stops email clients resizing small text. */
+        * {
+            -ms-text-size-adjust: 100%;
+            -webkit-text-size-adjust: 100%;
+        }
+
+        /* What it does: Centers email on Android 4.4 */
+        div[style*="margin: 16px 0"] {
+            margin:0 !important;
+        }
+
+        /* What it does: Stops Outlook from adding extra spacing to tables. */
+        table,
+        td {
+            mso-table-lspace: 0pt !important;
+            mso-table-rspace: 0pt !important;
+        }
+
+        /* What it does: Fixes webkit padding issue. Fix for Yahoo mail table alignment bug. Applies table-layout to the first 2 tables then removes for anything nested deeper. */
+        table {
+            border-spacing: 0 !important;
+            border-collapse: collapse !important;
+            table-layout: fixed !important;
+            margin: 0 auto !important;
+        }
+        table table table {
+            table-layout: auto;
+        }
+
+        /* What it does: Uses a better rendering method when resizing images in IE. */
+        img {
+            -ms-interpolation-mode:bicubic;
+        }
+
+        /* What it does: A work-around for iOS meddling in triggered links. */
+        *[x-apple-data-detectors] {
+            color: inherit !important;
+            text-decoration: none !important;
+        }
+
+        /* What it does: A work-around for Gmail meddling in triggered links. */
+        .x-gmail-data-detectors,
+        .x-gmail-data-detectors *,
+        .aBn {
+            border-bottom: 0 !important;
+            cursor: default !important;
+        }
+
+        /* What it does: Prevents Gmail from displaying an download button on large, non-linked images. */
+        .a6S {
+            display: none !important;
+            opacity: 0.01 !important;
+        }
+        /* If the above doesn't work, add a .g-img class to any image in question. */
+        img.g-img + div {
+            display:none !important;
+        }
+
+        /* What it does: Prevents underlining the button text in Windows 10 */
+        .button-link {
+            text-decoration: none !important;
+        }
+
+        /* What it does: Removes right gutter in Gmail iOS app: https://github.com/TedGoas/Cerberus/issues/89  */
+        /* Create one of these media queries for each additional viewport size you'd like to fix */
+        /* Thanks to Eric Lepetit (@ericlepetitsf) for help troubleshooting */
+        @media only screen and (min-device-width: 375px) and (max-device-width: 413px) { /* iPhone 6 and 6+ */
+            .email-container {
+                min-width: 375px !important;
+            }
+        }
+
+    </style>
+
+    <!-- Progressive Enhancements -->
+    <style>
+
+        /* What it does: Hover styles for buttons */
+        .button-td,
+        .button-a {
+            transition: all 100ms ease-in;
+        }
+        .button-td:hover,
+        .button-a:hover {
+            background: #555555 !important;
+            border-color: #555555 !important;
+        }
+
+        /* Media Queries */
+        @media screen and (max-width: 600px) {
+
+            .email-container {
+                width: 100% !important;
+                margin: auto !important;
+            }
+
+            /* What it does: Forces elements to resize to the full width of their container. Useful for resizing images beyond their max-width. */
+            .fluid {
+                max-width: 100% !important;
+                height: auto !important;
+                margin-left: auto !important;
+                margin-right: auto !important;
+            }
+
+            /* What it does: Forces table cells into full-width rows. */
+            .stack-column,
+            .stack-column-center {
+                display: block !important;
+                width: 100% !important;
+                max-width: 100% !important;
+                direction: ltr !important;
+            }
+            /* And center justify these ones. */
+            .stack-column-center {
+                text-align: center !important;
+            }
+
+            /* What it does: Generic utility class for centering. Useful for images, buttons, and nested tables. */
+            .center-on-narrow {
+                text-align: center !important;
+                display: block !important;
+                margin-left: auto !important;
+                margin-right: auto !important;
+                float: none !important;
+            }
+            table.center-on-narrow {
+                display: inline-block !important;
+            }
+
+            /* What it does: Adjust typography on small screens to improve readability */
+            .email-container p {
+                font-size: 17px !important;
+                line-height: 22px !important;
+            }
+
+        }
+
+    </style>
+
+    <!-- What it does: Makes background images in 72ppi Outlook render at correct size. -->
+    <!--[if gte mso 9]>
+    <xml>
+        <o:OfficeDocumentSettings>
+            <o:AllowPNG/>
+            <o:PixelsPerInch>96</o:PixelsPerInch>
+        </o:OfficeDocumentSettings>
+    </xml>
+    <![endif]-->
+
+</head>
+<body style="background: black">
+<table role="presentation" aria-hidden="true" cellspacing="0" cellpadding="0" border="0" align="center" width="600" style="margin: auto;" class="email-container">
+    <tbody>
+    <tr>
+        <td bgcolor="#002855" dir="ltr" align="center" valign="top" width="100%" style="padding: 20px 50px 20px 50px;">
+            <table role="presentation" aria-hidden="true" align="center" border="0" cellpadding="0" cellspacing="0" width="100%">
+                <tr>
+                    <!-- Column : BEGIN -->
+                    <td width="45%" class="stack-column-center" valign="middle" style="border-right: 1px solid white;">
+                        <table role="presentation" aria-hidden="true" align="center" border="0" cellpadding="0" cellspacing="0" width="100%">
+                            <tr>
+                                <td dir="ltr" valign="middle" style="padding: 0 20px 0 0">
+                                    <p style="margin: 0 0 0 0; font-family: sans-serif; font-weight: bold; font-size: 14px; color: white; text-transform: uppercase; text-align: right">Omnicomm kazakstan</p>
+                                </td>
+                            </tr>
+                        </table>
+                    </td>
+                    <!-- Column : END -->
+                    <!-- Column : BEGIN -->
+                    <td width="55%" class="stack-column-center">
+                        <table role="presentation" aria-hidden="true" align="center" border="0" cellpadding="0" cellspacing="0" width="100%">
+                            <tr>
+                                <td dir="ltr" valign="middle" style="font-family: sans-serif; font-size: 15px; color: #555555; padding: 0 0 0 17px; text-align: left;" class="center-on-narrow">
+                                    <img src="email-img/img-logo-s.png" style="float: left"><p style="font-family: sans-serif; font-size: 15px; color: #ffffff; font-weight: normal; margin: 3px 0 0 32px;"><span style="color: #fb4614">Золотой дилер</span> в Казахстане</p>
+                                    <!-- Button : END -->
+                                </td>
+                            </tr>
+                        </table>
+                    </td>
+                    <!-- Column : END -->
+                </tr>
+            </table>
+        </td>
+    </tr>
+    <tr>
+        <td bgcolor="#ffffff" dir="ltr" align="center" valign="top" width="100%" style="padding: 65px 50px 70px 50px;">
+            <table role="presentation" aria-hidden="true" align="center" border="0" cellpadding="0" cellspacing="0" width="100%">
+                <tr>
+                    <!-- Column : BEGIN -->
+                    <td width="100%" valign="top">
+                        <h1 style="font-family: sans-serif; font-weight: bold; font-size: 32px; color: #2b2c2d; margin: 0 0 28px 0">Здравствуйте, Олег!</h1>
+                    </td>
+                </tr>
+
+                <tr>
+                    <!-- Column : BEGIN -->
+                    <td width="100%" valign="top">
+                        <p style="font-family: sans-serif; font-size: 16px; color: #5b6971; font-weight: normal; line-height: 1.6">Спасибо за обращение в компанию «Omnicomm Kazakstan»</p>
+                    </td>
+                </tr>
+
+                <tr>
+                    <!-- Column : BEGIN -->
+                    <td width="100%" valign="top">
+                        <p style="font-family: sans-serif; font-size: 16px; color: #5b6971; font-weight: normal; line-height: 1.8">Ваша заявка с сайта <a href="#" style="color: #fb4614; text-decoration: underline">shablonsaita.omnicomm.ru</a> успешно принята в обработку. Наш менеджер обязательно свяжется с вами для уточнения всех деталей.</p>
+                    </td>
+                </tr>
+
+                <tr style="border-bottom: 2px solid #fb4614">
+                    <!-- Column : BEGIN -->
+                    <td width="100%" valign="top" style="padding-bottom: 40px;">
+                        <p style="font-family: sans-serif; font-size: 14px; color: #5b6971; font-weight: normal; line-height: 1.8">Мы работаем ежедневно с 10:00 до 18:00</p>
+                    </td>
+                </tr>
+
+                <tr>
+                    <!-- Column : BEGIN -->
+                    <td width="100%" valign="top" style="padding-top: 24px;">
+                        <h2 style="font-family: sans-serif; font-size: 18px; color: #2b2c2d; font-weight: bold">Детали заявки:</h2>
+                    </td>
+                </tr>
+
+                <tr>
+                    <td style="border-bottom: 2px solid #fb4614; padding-bottom: 50px">
+                        <table role="presentation" aria-hidden="true" align="center" border="0" cellpadding="0" cellspacing="0" width="100%">
+                            <tbody>
+                                <tr>
+                                    <td width="50%" style="font-family: sans-serif; font-size: 14px; color: #616365; font-weight: normal; padding: 8px 0;">ФИО</td>
+                                    <td width="50%" style="font-family: sans-serif; font-size: 14px; color: #2b2c2d; font-weight: bold">Олег</td>
+                                </tr>
+                                <tr>
+                                    <td width="50%" style="font-family: sans-serif; font-size: 14px; color: #616365; font-weight: normal; padding: 8px 0;">Организация</td>
+                                    <td width="50%" style="font-family: sans-serif; font-size: 14px; color: #2b2c2d; font-weight: bold">Marvel</td>
+                                </tr>
+                                <tr>
+                                    <td width="50%" style="font-family: sans-serif; font-size: 14px; color: #616365; font-weight: normal; padding: 8px 0;">Телефон</td>
+                                    <td width="50%" style="font-family: sans-serif; font-size: 14px; color: #2b2c2d; font-weight: bold">+7 (495) 123-45-67</td>
+                                </tr>
+                                <tr>
+                                    <td width="50%" style="font-family: sans-serif; font-size: 14px; color: #616365; font-weight: normal; padding: 8px 0;">Email</td>
+                                    <td width="50%" style="font-family: sans-serif; font-size: 14px; color: #2b2c2d; font-weight: bold"><a href="#" style="color: #fb4614; text-decoration: underline;">superhero@marvel.com</a></td>
+                                </tr>
+                                <tr>
+                                    <td width="50%" style="font-family: sans-serif; font-size: 14px; color: #616365; font-weight: normal; padding: 8px 0;">Обо мне</td>
+                                    <td width="50%" style="font-family: sans-serif; font-size: 14px; color: #2b2c2d; font-weight: bold">Хочу перейти на Omnicomm</td>
+                                </tr>
+                                <tr>
+                                    <td width="50%" style="font-family: sans-serif; font-size: 14px; color: #616365; font-weight: normal; padding: 8px 0;">Наименование товара</td>
+                                    <td width="50%" style="font-family: sans-serif; font-size: 14px; color: #2b2c2d; font-weight: bold">Omnicomm LLS 20230</td>
+                                </tr>
+                                <tr>
+                                    <td width="50%" style="font-family: sans-serif; font-size: 14px; color: #616365; font-weight: normal; padding: 8px 0;">Количество</td>
+                                    <td width="50%" style="font-family: sans-serif; font-size: 14px; color: #2b2c2d; font-weight: bold">5</td>
+                                </tr>
+                                <tr>
+                                    <td width="50%" style="font-family: sans-serif; font-size: 14px; color: #616365; font-weight: normal; padding: 8px 0;">Комментарий</td>
+                                    <td width="50%" style="font-family: sans-serif; font-size: 14px; color: #2b2c2d; font-weight: bold">Будем рады сотрудничеству</td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </td>
+                </tr>
+
+                <tr>
+                    <!-- Column : BEGIN -->
+                    <td width="100%" valign="top" style="padding-top: 40px;">
+                        <p style="font-family: sans-serif; font-size: 16px; color: #5b6971; font-weight: normal; line-height: 1.6">Благодарим за ваш выбор! Будьте эффективными с Omnicomm.</p>
+                    </td>
+                </tr>
+
+            </table>
+        </td>
+    </tr>
+    <tr>
+        <td bgcolor="#002855" dir="ltr" align="center" valign="top" width="100%" style="padding: 40px 50px 20px 50px;">
+            <table role="presentation" aria-hidden="true" align="center" border="0" cellpadding="0" cellspacing="0" width="100%">
+                <tr>
+                    <!-- Column : BEGIN -->
+                    <td width="100%" valign="top">
+                        <p style="font-family: sans-serif; font-size: 24px; color: #ffffff; font-weight: bold; text-transform: uppercase; margin: 8px 0">Omnicomm kazakstan</p>
+                    </td>
+                </tr>
+
+                <tr>
+                    <td width="100%" valign="top" style="padding-bottom: 20px;">
+                        <img src="email-img/img-logo-s.png" style="float: left"><p style="font-family: sans-serif; font-size: 15px; color: #ffffff; font-weight: normal; margin: 3px 0 0 32px;"><span style="color: #fb4614">Золотой дилер</span></p>
+                    </td>
+                </tr>
+
+                <tr style="border-top: 2px solid #fb4614; border-bottom: 2px solid #fb4614;">
+                    <td width="100%" valign="top" style="padding: 20px 0 15px 0">
+                        <img src="email-img/img-logo.png">
+                    </td>
+                </tr>
+
+                <tr>
+                    <td width="100%" valign="top" style="padding-top: 20px">
+                        <p style="font-family: sans-serif; font-size: 14px; color: #adb6c1; font-weight: normal; margin: 6px 0">ООО «Омникомм Казахстан»</p>
+                    </td>
+                </tr>
+
+                <tr>
+                    <td width="100%" valign="top" style="">
+                        <p style="font-family: sans-serif; font-size: 14px; color: #adb6c1; font-weight: normal; margin: 6px 0">Тел. +7 (495) 765-43-21, доб. 098</p>
+                    </td>
+                </tr>
+
+                <tr>
+                    <td width="100%" valign="top" style="">
+                        <p style="font-family: sans-serif; font-size: 14px; color: #adb6c1; font-weight: normal; margin: 6px 0">Москва, ул. Бутырский Вал, д.68/70 стр.1</p>
+                    </td>
+                </tr>
+
+                <tr>
+                    <td width="100%" valign="top" style="">
+                        <p style="font-family: sans-serif; font-size: 14px; color: #adb6c1; font-weight: normal; margin: 6px 0">Бизнес-центр Baker Plaza, офис 41</p>
+                    </td>
+                </tr>
+
+                <tr>
+                    <td width="100%" valign="top" style="">
+                        <p style="font-family: sans-serif; font-size: 14px; color: #adb6c1; font-weight: normal; margin: 6px 0">www.shablonsaita.omnicomm.ru</p>
+                    </td>
+                </tr>
+
+                <tr>
+                    <td width="100%" valign="top" style="padding-top: 40px; padding-bottom: 50px">
+                        <a href="#" style="margin-right: 10px"><img src="email-img/img-inst.png"></a>
+                        <a href="#" style="margin-right: 10px"><img src="email-img/img-googl.png"></a>
+                        <a href="#" style="margin-right: 10px"><img src="email-img/img-vk.png"></a>
+                        <a href="#" style="margin-right: 10px"><img src="email-img/img-youtube.png"></a>
+                        <a href="#" style="margin-right: 10px"><img src="email-img/img-face.png"></a>
+                        <a href="#" style="margin-right: 10px"><img src="email-img/img-tw.png"></a>
+                    </td>
+                </tr>
+
+                <tr>
+                    <td width="100%" valign="top" style="">
+                        <p style="font-family: sans-serif; font-size: 12px; color: #8b93a8; font-weight: normal; margin: 3px 0">Это письмо было отправлено автоматически.</p>
+                    </td>
+                </tr>
+                <tr>
+                    <td width="100%" valign="top" style="">
+                        <p style="font-family: sans-serif; font-size: 12px; color: #8b93a8; font-weight: normal; margin: 3px 0">Если вы считаете, что получили его по ошибке, просто проигнорируйте его.</p>
+                    </td>
+                </tr>
+
+            </table>
+        </td>
+    </tr>
+    </tbody>
+</table>
+</body>
+</html>

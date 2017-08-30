@@ -1,0 +1,155 @@
+extends _layout
+
+block content
+    main#barba-wrapper
+        section.barba-container
+            section.container-wrapper-header-title
+                //.block-img(data-parallax="scroll" data-image-src="img/bg/bg-equipment.png")
+                .block-img(style="background-image:url('img/bg/bg-map.jpg')")
+                .block-wrapper-title
+                    .block-wrapper-title_title-bread-crumbs
+                        h1 Купить оборудование <br> Omnicomm
+                        a(href='javascript:;' data-fancybox data-src='#hidden-feedback2').btn-order Обратная связь
+                        .bread-crumbs
+                            a(href='#') Главная
+                            span Купить
+
+            section.container-wrapper-card-product
+                .wrapper-card-product
+
+                    .wrapper-card-product_left
+                        .wrapper-card-product_left-menu
+                            .block-product-menu
+                                a(href='#').block-product-menu_title.active-block Екатеринбург
+                            .block-product-menu
+                                a(href='#').block-product-menu_title Тюмень
+                            .block-product-menu
+                                a(href='#').block-product-menu_title Челябинск
+                            .block-product-menu
+                                a(href='#').block-product-menu_title Каменск-Уральский
+
+                    .wrapper-contant-right
+                        .wrapper-content-right
+                            .wrapper-content-right_txt
+                                .wrapper-container_title Omnicomm systems
+                                .wrapper-comp-info
+                                    .wrapper-comp-info_city Екатеринбург
+                                    .wrapper-comp-info_list
+                                        .block-comp-info_list
+                                            .comp-info_list
+                                                .comp-info_list-title Отдел продаж
+                                                a.comp-info_list-tel(href='tel:8 (800) 100-24-42')  8 (800) 100-24-42
+                                                .comp-info_list-small-t Бесплатный звонок из любого региона РФ
+                                                a.comp-info_list-email(href='mailto:info@omnicomm.kz')
+                                                    span info@omnicomm.kz
+
+                                            .comp-info_list
+                                                .comp-info_list-title Адрес
+                                                .comp-info_list-txt г. Екатеринбург, пр. Бухар-Жырау, 82
+                                                a.comp-info_list-popup(href='#') Как до нас добраться
+
+                                        .block-comp-info_list
+                                            .comp-info_list
+                                                .comp-info_list-title Техническая поддержка
+                                                a.comp-info_list-tel(href='tel:8 (800) 100-24-42')  8 (800) 100-24-42
+                                                .comp-info_list-small-t Бесплатный звонок из любого региона РФ
+                                                a.comp-info_list-email(href='mailto:support@omnicomm.kz')
+                                                    span support@omnicomm.kz
+
+                                            .comp-info_list
+                                                .comp-info_list-title Режим работы
+                                                .comp-info_list-txt Пн.– Пт. 9:00 – 19:00
+                                                .comp-info_list-txt Сб. – Вс. выходные
+
+                                .wrapper-maps
+                                    .container-maps#map
+                                        script(src="js/map.js")
+
+                                .wrapper-comanda
+                                    .container-comanda
+                                        .block-comanda
+                                            .block-comanda_avatar
+                                                img(src='img/img-avatar.jpg' alt='')
+                                            .block-comanda_info
+                                                .block-comanda_info-name Евгений Максаев
+                                                .block-comanda_info-dev Коммерчесaкий директор
+                                                .block-comanda_info-list
+                                                    span моб.:
+                                                        | +7 495 772-83-92
+                                                .block-comanda_info-list
+                                                    span доб.:
+                                                        | 258
+                                                a(href='mailto:maksaev@omnicomm.ru').block-comanda_info-email
+                                                    span maksaev@omnicomm.ru
+
+                                        .block-comanda
+                                            .block-comanda_avatar
+                                                img(src='img/img-avatar.jpg' alt='')
+                                            .block-comanda_info
+                                                .block-comanda_info-name Сергей Кулаков
+                                                .block-comanda_info-dev Начальник отдела продаж
+                                                .block-comanda_info-list
+                                                    span моб.:
+                                                        | +7 926 207-12-42
+                                                .block-comanda_info-list
+                                                    span доб.:
+                                                        | 258
+                                                .block-comanda_info-list
+                                                    span Skype:
+                                                        | kulakov_omnicomm
+                                                a(href='mailto:kulakov@omnicomm.ru').block-comanda_info-email
+                                                    span kulakov@omnicomm.ru
+
+                                        .block-comanda
+                                            .block-comanda_avatar
+                                                img(src='img/img-avatar.jpg' alt='')
+                                            .block-comanda_info
+                                                .block-comanda_info-name Виктор Терёхин
+                                                .block-comanda_info-dev Заместитель начальника отдела продаж
+                                                .block-comanda_info-list
+                                                    span моб.:
+                                                        | +7 926 001-98-45
+                                                .block-comanda_info-list
+                                                    span доб.:
+                                                        | 258
+                                                .block-comanda_info-list
+                                                    span Skype:
+                                                        | terehin_viktor
+                                                a(href='mailto:terehin@omnicomm.ru').block-comanda_info-email
+                                                    span terehin@omnicomm.ru
+
+                                        .block-comanda
+                                            .block-comanda_avatar
+                                                img(src='img/img-avatar.jpg' alt='')
+                                            .block-comanda_info
+                                                .block-comanda_info-name Валентина Репина
+                                                .block-comanda_info-dev Менеджер отдела продаж
+                                                .block-comanda_info-list
+                                                    span моб.:
+                                                        | +7 926 810-07-89
+                                                .block-comanda_info-list
+                                                    span доб.:
+                                                        | 258
+                                                .block-comanda_info-list
+                                                    span Skype:
+                                                        | repina_valya
+                                                a(href='mailto:repina@omnicomm.ru').block-comanda_info-email
+                                                    span repina@omnicomm.ru
+
+                                        .block-comanda
+                                            .block-comanda_avatar
+                                                img(src='img/img-avatar.jpg' alt='')
+                                            .block-comanda_info
+                                                .block-comanda_info-name Игорь Малышев
+                                                .block-comanda_info-dev Менеджер отдела продаж
+                                                .block-comanda_info-list
+                                                    span моб.:
+                                                        | +7 968 474-43-30
+                                                .block-comanda_info-list
+                                                    span доб.:
+                                                        | 258
+                                                .block-comanda_info-list
+                                                    span Skype:
+                                                        | malyshev_rks
+                                                a(href='mailto:malyshev@omnicomm.ru').block-comanda_info-email
+                                                    span malyshev@omnicomm.ru
