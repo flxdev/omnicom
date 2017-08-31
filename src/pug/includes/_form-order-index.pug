@@ -8,11 +8,9 @@ section.container-wrapper-ordering
         .wrapper-advantage-btn
             .wrapper-advantage-btn_blue
                 .icon-priemyschestva
-                    <svg width="30" height="30" xmlns="http://www.w3.org/2000/svg">
-                    <g>
-                    <title>Layer 1</title>
-                    <path id="svg_1" d="m15,0c-8.3,0 -15,6.7 -15,15s6.7,15 15,15s15,-6.7 15,-15s-6.7,-15 -15,-15zm-3.6,21.8l-5.8,-5.8l0,0l0.8,-0.8l5,5l11.6,-11.6l0.8,0.8l-12.4,12.4z" class="st0"/>
-                    </g>
+                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 30 30">
+                    <style>.st0{fill:#062854;}</style>
+                    <path d="M15 0C6.7 0 0 6.7 0 15s6.7 15 15 15 15-6.7 15-15S23.3 0 15 0zm-3.6 21.8L5.6 16l.8-.8 5 5L23 8.6l.8.8-12.4 12.4z" class="st0"/>
                     </svg>
                 span Хочу перейти на Omnicomm
             .wrapper-advantage-btn_white Новый клиент
@@ -34,36 +32,36 @@ section.container-wrapper-ordering
                         .form-label
                             label.input-label ФИО<span>*</span>
                         .form-input
-                            input(data-validation="required" type="txt" data-validation-error-msg="Name is not correct").input-box.input-name
+                            input(data-validation="required" type="text" data-validation-error-msg="Name is not correct").input-box.input-name
 
                     .box-input
                         .form-label
                             label.input-label Организация
                         .form-input
-                            input(type="txt").input-box.input-name
+                            input(type="text").input-box.input-name
 
                     .box-input
                         .form-label
                             label.input-label Телефон<span>*</span>
                         .form-input
-                            input(data-validation="required" type="txt" data-validation-error-msg="Name is not correct").input-box.input-name
+                            input(data-validation="required" type="text" data-validation-error-msg="Name is not correct").input-box.input-name
 
                     .box-input
                         .form-label
                             label.input-label E-mail<span>*</span>
                         .form-input
-                            input(data-validation="email required" type="txt" data-validation-error-msg="Name is not correct").input-box.input-name
+                            input(data-validation="email required" type="text" data-validation-error-msg="Name is not correct").input-box.input-name
 
                     .box-input
                         .form-label
                             label.input-label Комментарий
                         .form-input
-                            textarea(data-validation="required" type="text" data-validation-error-msg="Message is not correct").input-box.textarea-box
+                            textarea(data-validation="required" data-validation-error-msg="Message is not correct").input-box.textarea-box
 
                     .box-check
                         .input-wrapp
-                            input.ch(type='checkbox' id='m')
-                            label(for='m') Даю согласие на обработку моих <a href="#"> <span> персональных данных *</span> </a>
+                            input.ch(type='checkbox' id='m1')
+                            label(for='m1') Даю согласие на обработку моих <a href="#"> <span> персональных данных *</span> </a>
 
                     .box-btn-form
                         button.btn-form Отправить заявку
