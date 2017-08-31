@@ -3442,12 +3442,11 @@ h1 {
   width: 24%;
   z-index: 5; }
   .wrapper-counter .block-counter {
-    background-image: url("../img/img-prot.png");
     width: 94%;
-    height: 271px;
     background-size: cover;
     text-align: center;
-    padding: 85px 20px 0 20px; }
+    padding: 85px 20px 0 20px;
+    position: relative; }
     .wrapper-counter .block-counter .block-counter_percent {
       font-family: "EtelkaLight";
       font-size: 50px;
@@ -3456,6 +3455,13 @@ h1 {
       font-family: "EtelkaLight";
       font-size: 16px;
       color: #5b6971; }
+    .wrapper-counter .block-counter .block-clock {
+      width: 100%;
+      position: absolute;
+      top: 0;
+      left: 0; }
+      .wrapper-counter .block-counter .block-clock .st0 {
+        fill: #002855; }
 
 .wrapper-content-text {
   -webkit-align-content: stretch;

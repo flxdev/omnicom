@@ -583,12 +583,11 @@ h1{
   width: 24%;
   z-index: 5;
   .block-counter{
-    background-image: url("../img/img-prot.png");
     width: 94%;
-    height: 271px;
     background-size: cover;
     text-align: center;
     padding: 85px 20px 0 20px;
+    position: relative;
     .block-counter_percent{
       @include fontEtelkaLightPro;
       font-size: 50px;
@@ -598,6 +597,15 @@ h1{
       @include fontEtelkaLightPro;
       font-size: 16px;
       color: #5b6971;
+    }
+    .block-clock{
+      width: 100%;
+      position: absolute;
+      top: 0;
+      left: 0;
+      .st0{
+        fill: #002855;
+      }
     }
   }
 }
