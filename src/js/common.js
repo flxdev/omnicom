@@ -355,6 +355,37 @@ $(window).on('resize', function() {
     }
 });
 
+function initPlayer(){
+    // var players = document.querySelectorAll('video-wrap');
+    // var lngth = players.length;
+    // for (var i = 1, i<= lngth, i++){
+    // 	var video = player[i].querySelector('iframe');
+
+    // }
+    var players = $('.block-video');
+    players.each(function(){
+        var _ = $(this);
+        _.on('click', function(e){
+            _.addClass('played').find('iframe')[0].src += "?&autoplay=1";
+            e.preventDefault();
+        });
+    });
+}
+
+function initValidForm() {
+    var form_valid = $(".js-form");
+    if (form_valid.length) {
+        form_valid.each(function () {
+            var form_this = $(this);
+            $.validate({
+                form: form_this,
+                borderColorOnError: true,
+                scrollToTopOnError: false,
+                modules: 'html5',
+            });
+        });
+    }
+}
 
 
 initSetting();
@@ -376,3 +407,5 @@ initscrollHeader();
 initSliderList();
 initSelect();
 initSearchMapSite();
+initPlayer();
+initValidForm();

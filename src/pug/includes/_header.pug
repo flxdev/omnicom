@@ -23,8 +23,7 @@ include _map-site
                 .wrapper-adress Г. Караганда, пр. Бухар-Жырау, 82
 
         .container-top-block_name-comany Omnicomm kazakstan
-        .container-top-block_icon-mobile
-            img(src='img/icon-mobile-top.png' alt='')
+        .container-top-block_icon-mobile(style='background-image:url("img/icon-mobile-top.png")')
         .container-top-block_diler
             span.icon-diler
                 <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 30 30">
@@ -35,8 +34,9 @@ include _map-site
             span.txt в Казахстане
     .container-wrapper-header
         .block-header
-            a(href='#').block-header-logo
-                img.block-header-logo_img(src='img/logo.png' alt='')
+            .block-header-logo
+                a(href='#')
+                    .block-header-logo_img(style='background-image:url("img/logo.png")')
 
                 .block-header-logo_txt
                     .block-header-logo_logo Omnicomm <br> kazakstan
@@ -46,7 +46,7 @@ include _map-site
                                 <style>.st0{fill:#F64224;}</style>
                                 <path d="M15 0C6.7 0 0 6.7 0 15s6.7 15 15 15 15-6.7 15-15S23.3 0 15 0zm5.5 22.9L15 20l-5.5 2.9 1.1-6.2L6 12.4l6.2-.9L15 5.9l2.8 5.6 6.2.9-4.5 4.4 1 6.1z" class="st0"/>
                                 </svg>
-                            span.dealer-txt Золотой <br> дилер
+                            a(href='#').dealer-txt Золотой <br> дилер
             .block-header-menu
                 nav.js-menu-category
                     ul.menu_categories

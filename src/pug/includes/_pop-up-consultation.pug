@@ -1,33 +1,40 @@
 #hidden-consultation.w-p(style='display: none;')
-    .wrapper-container_title Купить в один клик
-    form.js-form
-        .wrapper-form
-            .box-input
-                .form-label
-                    label.input-label ФИО<span>*</span>
-                .form-input
-                    input(data-validation="required" type="text" data-validation-error-msg="Name is not correct").input-box
-            .box-input
-                .form-label
-                    label.input-label Организация<span>*</span>
-                .form-input
-                    input(data-validation="required" type="text" data-validation-error-msg="Name is not correct").input-box
-            .box-input-t
-                .box-input.w-50
+    .modal-container
+        .wrapper-container_title Купить в один клик
+        form.js-form
+            .wrapper-form
+                .box-input
                     .form-label
-                        label.input-label Телефон<span>*</span>
+                        label.input-label ФИО<span>*</span>
                     .form-input
-                        input(type="text").input-box
-                .box-input.w-50
+                        input(data-validation="length  required" type="text" data-validation-length='min3' data-validation-error-msg="Поле обязательно для заполнения").input-box
+                .box-input
                     .form-label
-                        label.input-label E-mail
+                        label.input-label Организация<span>*</span>
                     .form-input
-                        input.input-box
+                        input(data-validation="length  required" type="text" data-validation-length='min3' data-validation-error-msg="Поле обязательно для заполнения").input-box
+                .box-input-t
+                    .box-input.w-50
+                        .form-label
+                            label.input-label Телефон<span>*</span>
+                        .form-input
+                            input(type="tel" data-validation="custom" data-validation-regexp="^[-0-9()+ ]+$" data-validation-error-msg="Поле обязательно для заполнения").input-box
+                    .box-input.w-50
+                        .form-label
+                            label.input-label E-mail
+                        .form-input
+                            input.input-box
 
-            .box-check
-                .input-wrapp
-                    input.ch(type='checkbox' id='m3')
-                    label(for='m3') Даю согласие на обработку моих <a href="#"> <span> персональных данных *</span> </a>
+                .box-check
+                    .input-wrapp.block-check-inline
+                        input.ch(type='checkbox' id='m3' data-validation="required" data-validation-error-msg="Поле обязательно для заполнения")
+                        label(for='m3') Даю согласие на обработку моих <a href="#"> <span> персональных данных *</span> </a>
 
-            .box-btn-form
-                button.btn-form Отправить
+                .box-btn-form
+                    button.btn-form Отправить
+
+    // Modal Window
+    .modal-container(style='display: none;')
+        .wrapper-container_title Спасибо за ображение!
+        .modal-container_txt
+            p Ваше сообщение успешно отправлено. Наш оператор свяжется с вами в ближайшее время.

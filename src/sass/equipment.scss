@@ -3,6 +3,136 @@
   position: relative;
 }
 
+.equipment-list{
+  font-size: 0;
+  .box-equipment-list{
+    @include display-inline-top;
+    width: 31%;
+    margin-bottom: 55px;
+    &:first-child{
+      margin-left: 0;
+      margin-right: 3%;
+    }
+    &:last-child{
+      margin-left: 3%;
+      margin-right: 0;
+    }
+    .box-equipment-list_link{
+      background-color: #002855;
+      padding: 0 40px;
+      display: block;
+      overflow: hidden;
+      height: 345px;
+      @include hover-time-all;
+      .box-equipment-list_link-title{
+        @include fontEtelkaTextPro;
+        color: white;
+        font-size: 24px;
+        position: relative;
+        padding-right: 35px;
+        line-height: 1.2;
+        margin-top: 35px;
+        @include hover-time-all;
+        .icon-arrow{
+          width: 12px;
+          height: 20px;
+          position: absolute;
+          top: 5px;
+          right: 0;
+          .st0{
+            fill: white;
+            @include hover-time-all;
+          }
+        }
+      }
+      .box-equipment-list_icon{
+        margin-top: 28px;
+        border-top: 2px solid #ff5000;
+        @include hover-time-all;
+        .icon-term-omn{
+          width: 214px;
+          height: 155px;
+          float: right;
+          margin-top: 35px;
+          margin-bottom: 35px;
+          svg{
+            fill: #ff5000;
+            @include hover-time-all;
+          }
+          path{
+            fill: #ff5000;
+            @include hover-time-all;
+          }
+        }
+        .icon-dop-omn{
+          width: 230px;
+          height: 190px;
+          float: right;
+          margin-top: 35px;
+          svg{
+            fill: #ff5000;
+            @include hover-time-all;
+          }
+          path{
+            fill: #ff5000;
+            @include hover-time-all;
+          }
+        }
+        .icon-dop-ob{
+          width: 195px;
+          height: 190px;
+          float: right;
+          margin-top: 35px;
+          svg{
+            fill: #ff5000;
+            @include hover-time-all;
+          }
+          path{
+            fill: #ff5000;
+            @include hover-time-all;
+          }
+        }
+      }
+      &:hover{
+        background-color: #fb4614;
+        .box-equipment-list_link-title{
+          color: #002855;
+          .icon-arrow .st0{
+            fill: #002855;
+          }
+        }
+        .box-equipment-list_icon{
+          border-top: 2px solid #002855;
+          .icon-term-omn{
+            svg{
+              fill: #002855;
+            }
+            path{
+              fill: #002855;
+            }
+          }
+          .icon-dop-omn{
+            svg{
+              fill: #002855;
+            }
+            path{
+              fill: #002855;
+            }
+          }
+          .icon-dop-ob{
+            svg{
+              fill: #002855;
+            }
+            path{
+              fill: #002855;
+            }
+          }
+        }
+      }
+    }
+  }
+}
+
 .wrapper-equipment-list{
   position: relative;
   width: 1440px;
@@ -250,6 +380,7 @@
   width: 36%;
   position: relative;
   margin-right: 2%;
+  margin-bottom: 60px;
   img{
     width: 100%;
   }
@@ -303,6 +434,7 @@
   width: 62%;
   padding-left: 20px;
   margin-bottom: 70px;
+  min-height: 315px;
 }
 
 .wrapper-card-product-info_name-application{
@@ -316,6 +448,13 @@
     color: #002855;
     @include fontEtelkaTextPro;
     margin-bottom: 11px;
+    display: inline-block;
+  }
+  a.wrapper-card-product-info_name-product{
+    @include hover-time;
+    &:hover{
+      color: #fb4614;
+    }
   }
   .wrapper-card-product-info_application{
     font-size: 11px;
@@ -634,7 +773,7 @@
       color: #616365;
       width: 34%;
       vertical-align: middle;
-      padding: 14px 0;
+      padding: 14px 70px 14px 0;
       line-height: 1.6;
     }
     .box-th{

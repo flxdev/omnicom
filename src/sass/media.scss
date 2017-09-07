@@ -82,6 +82,13 @@
       }
     }
   }
+  ul.equipment-list{
+    .box-equipment-list{
+      .box-equipment-list_link{
+        padding: 0 20px;
+      }
+    }
+  }
   .hidden-menu{
     display: none !important;
   }
@@ -221,6 +228,23 @@
     .wrapper-contact_link-soc{
       .link-soc{
         width: 11%;
+      }
+    }
+  }
+  .wripper-video-txt{
+    .container-video-txt{
+      .block-video{
+        iframe{
+
+        }
+      }
+    }
+  }
+
+  .wrapper-tab-table-content{
+    table{
+      .box-td{
+        padding: 14px 40px 14px 0;
       }
     }
   }
@@ -587,10 +611,10 @@
   .container-top-block_icon-mobile{
     display: block;
     width: 160px;
+    height: 27px;
+    background-size: cover;
+    background-repeat: no-repeat;
     margin-left: 15px;
-    img{
-      width: 100%;
-    }
   }
   .footer-wrapper-bottom{
     .footer-wrapper_logo-dealer{
@@ -655,6 +679,15 @@
       .box-equipment-list_link{
         height: auto;
       }
+    }
+  }
+  .equipment-list .box-equipment-list{
+    width: 100%;
+    &:last-child{
+      margin-left: 0;
+    }
+    .box-equipment-list_link{
+      height: auto;
     }
   }
   .block-img{
@@ -868,6 +901,20 @@
       .block-header-logo_logo{
         font-size: 13px;
       }
+    }
+  }
+  .form-input.has-error{
+    .form-error{
+      @include fontEtelkaLightPro;
+      font-size: 14px;
+      color: #fb4614;
+      position: relative;
+      top: 0;
+      right: auto;
+      z-index: 6;
+      margin-top: -10px;
+      display: block;
+      margin-bottom: 15px;
     }
   }
 }

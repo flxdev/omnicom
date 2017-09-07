@@ -1,21 +1,28 @@
 #hidden-feedback.w-p(style='display: none;')
-    .wrapper-container_title Купить в один клик
-    form.js-form
-        .wrapper-form
-            .box-input
-                .form-label
-                    label.input-label ФИО<span>*</span>
-                .form-input
-                    input(data-validation="required" type="text" data-validation-error-msg="Name is not correct").input-box
-            .box-input
-                .form-label
-                    label.input-label Телефон<span>*</span>
-                .form-input
-                    input(data-validation="required" type="text" data-validation-error-msg="Name is not correct").input-box
-            .box-check
-                .input-wrapp
-                    input.ch(type='checkbox' id='m4')
-                    label(for='m4') Даю согласие на обработку моих <a href="#"> <span> персональных данных *</span> </a>
+    .modal-container
+        .wrapper-container_title Обратный звонок
+        form.js-form
+            .wrapper-form
+                .box-input
+                    .form-label
+                        label.input-label ФИО<span>*</span>
+                    .form-input
+                        input(data-validation="length  required" type="text" data-validation-length='min3' data-validation-error-msg="Поле обязательно для заполнения").input-box
+                .box-input
+                    .form-label
+                        label.input-label Телефон<span>*</span>
+                    .form-input
+                        input(type="tel" data-validation="custom" data-validation-regexp="^[-0-9()+ ]+$" data-validation-error-msg="Поле обязательно для заполнения").input-box
+                .box-check
+                    .input-wrapp.block-check-inline
+                        input.ch(type='checkbox' id='m4' data-validation="required" data-validation-error-msg="Поле обязательно для заполнения")
+                        label(for='m4') Даю согласие на обработку моих <a href="#"> <span> персональных данных *</span> </a>
 
-            .box-btn-form
-                button.btn-form Заказать
+                .box-btn-form
+                    button.btn-form Заказать
+
+    // Modal Window
+    .modal-container(style='display: none;')
+        .wrapper-container_title Спасибо за ображение!
+        .modal-container_txt
+            p Ваше сообщение успешно отправлено. Наш оператор свяжется с вами в ближайшее время.

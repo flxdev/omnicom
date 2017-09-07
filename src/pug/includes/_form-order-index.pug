@@ -32,7 +32,7 @@ section.container-wrapper-ordering
                         .form-label
                             label.input-label ФИО<span>*</span>
                         .form-input
-                            input(data-validation="required" type="text" data-validation-error-msg="Name is not correct").input-box.input-name
+                            input(data-validation="length  required" type="text" data-validation-length='min3' data-validation-error-msg="Поле обязательно для заполнения").input-box.input-name
 
                     .box-input
                         .form-label
@@ -44,24 +44,29 @@ section.container-wrapper-ordering
                         .form-label
                             label.input-label Телефон<span>*</span>
                         .form-input
-                            input(data-validation="required" type="text" data-validation-error-msg="Name is not correct").input-box.input-name
+                            input(type="tel" data-validation="custom" data-validation-regexp="^[-0-9()+ ]+$" data-validation-error-msg="Поле обязательно для заполнения").input-box.input-name
 
                     .box-input
                         .form-label
                             label.input-label E-mail<span>*</span>
                         .form-input
-                            input(data-validation="email required" type="text" data-validation-error-msg="Name is not correct").input-box.input-name
+                            input(data-validation="email" type="email" data-validation-error-msg="Поле обязательно для заполнения").input-box.input-name
 
                     .box-input
                         .form-label
                             label.input-label Комментарий
                         .form-input
-                            textarea(data-validation="required" data-validation-error-msg="Message is not correct").input-box.textarea-box
-
+                            textarea.input-box.textarea-box
+                    //        (data-validation="required" data-validation-error-msg="Message is not correct")
                     .box-check
-                        .input-wrapp
-                            input.ch(type='checkbox' id='m1')
+                        .input-wrapp.block-check-inline
+                            input.ch(type='checkbox' id='m1' data-validation="required" data-validation-error-msg="Поле обязательно для заполнения")
                             label(for='m1') Даю согласие на обработку моих <a href="#"> <span> персональных данных *</span> </a>
 
                     .box-btn-form
-                        button.btn-form Отправить заявку
+                        button(type='submit').btn-form Отправить заявку
+
+                    // container modal window
+                    .box-modal-ordering-form(style='display: none')
+                        .h3 Спасибо за обращение!
+                        p Ваше сообщение успешно отправлено. <br> Наш оператор свяжется с вами в ближайшее время.
