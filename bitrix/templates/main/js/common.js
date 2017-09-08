@@ -246,10 +246,12 @@ function initSliderList() {
 }
 
 function initSliderTimerBig() {
+    var paginationBig = $('.container-slider-timer-big').data("arrayb");
+
     $('.container-slider-timer-big').sangarSlider2({
         timer :  true,
         pagination : 'content-horizontal',
-        paginationContent : ["img/nav-slider-1.png", "img/nav-slider-2.png", "img/nav-slider-3.png", "img/nav-slider-4.png"],
+        paginationContent : paginationBig,
         paginationContentType : 'image',
         paginationContentWidth : 65,
         paginationImageHeight : 65,
@@ -260,10 +262,12 @@ function initSliderTimerBig() {
 }
 
 function initSliderTimerSmall() {
+    var paginationSmall = $('.container-slider-timer-small').data("arrays");
+
     $('.container-slider-timer-small').sangarSlider({
         timer :  true,
         pagination : 'content-horizontal',
-        paginationContent : ["img/nav-slider-1.png", "img/nav-slider-2.png", "img/nav-slider-3.png", "img/nav-slider-4.png"],
+        paginationContent : paginationSmall,
         paginationContentType : 'image',
         paginationContentWidth : 65,
         paginationImageHeight : 65,
@@ -387,6 +391,23 @@ function initValidForm() {
     }
 }
 
+function initAncour() {
+    $('.js-order-click').on('click', function() {
+        var elementClick = $(this).attr("href");
+        var destination = $(elementClick).offset().top;
+
+        var orderProduct = $(this).data("order");
+
+        $('.js-name').val(orderProduct.name);
+        $('.js-id').val(orderProduct.id);
+
+        $("html:not(:animated),body:not(:animated)").animate({
+            scrollTop: destination
+        }, 800);
+        $('.js-name').focus();
+    });
+}
+
 
 initSetting();
 initMenu();
@@ -409,3 +430,4 @@ initSelect();
 initSearchMapSite();
 initPlayer();
 initValidForm();
+initAncour();

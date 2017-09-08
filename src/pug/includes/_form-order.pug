@@ -1,4 +1,4 @@
-section.container-wrapper-ordering
+section.container-wrapper-ordering#containerForm
     .wrapper-ordering
         .wrapper-container_title Оформление заказа
         .wrapper-ordering-advantage
@@ -43,7 +43,8 @@ section.container-wrapper-ordering
                             .form-label
                                 label.input-label Наименование товара
                             .form-input
-                                input(type="text").input-box
+                                input(type="text").input-box.js-name
+                                input(type="text" style="display:none").js-id
                         .box-input.w-20
                             .form-label
                                 label.input-label Количество
