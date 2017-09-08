@@ -376,6 +376,18 @@ function initPlayer(){
     });
 }
 
+function formResponse(form) {
+    if(form.closest('.modal-container').length){
+        var cont = form.closest('.modal-container'),
+            resp = cont.next('.response');
+        if(resp.length){
+            cont.fadeOut("slow",function(){
+                resp.fadeIn("slow");
+            });
+        }
+    }
+}
+
 function initValidForm() {
     var form_valid = $(".js-form");
     if (form_valid.length) {
@@ -386,6 +398,10 @@ function initValidForm() {
                 borderColorOnError: true,
                 scrollToTopOnError: false,
                 modules: 'html5',
+                onSuccess: function ($form) {
+                    formResponse(form_this);
+                    return false;
+                }
             });
         });
     }
@@ -408,26 +424,27 @@ function initAncour() {
     });
 }
 
-
-initSetting();
-initMenu();
-initTabsCardProductInfo();
-initDropShow();
-initTabsTableProductInfo();
-initSliderText();
-initMasonryNews();
-initSliderProduct();
+$(document).ready(function() {
+    initSetting();
+    initMenu();
+    initTabsCardProductInfo();
+    initDropShow();
+    initTabsTableProductInfo();
+    initSliderText();
+    initMasonryNews();
+    initSliderProduct();
 // initTelefon();
-initScrollOrdering();
-focusInput();
-initSliderR();
-initSliderSmall();
-initSliderTimerSmall();
-initSliderTimerBig();
-initscrollHeader();
-initSliderList();
-initSelect();
-initSearchMapSite();
-initPlayer();
-initValidForm();
-initAncour();
+    initScrollOrdering();
+    focusInput();
+    initSliderR();
+    initSliderSmall();
+    initSliderTimerSmall();
+    initSliderTimerBig();
+    initscrollHeader();
+    initSliderList();
+    initSelect();
+    initSearchMapSite();
+    initPlayer();
+    initValidForm();
+    initAncour();
+});
