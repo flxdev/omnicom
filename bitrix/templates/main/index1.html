@@ -456,14 +456,12 @@
               </div>
               <div class="wrapper-container_title">Начните работать эффективно с Omnicomm</div>
               <div class="wrapper-advantage-btn">
-                <div class="wrapper-advantage-btn_blue">
-                  <div class="icon-priemyschestva"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 30 30">
-<style>.st0{fill:#062854;}</style>
-<path d="M15 0C6.7 0 0 6.7 0 15s6.7 15 15 15 15-6.7 15-15S23.3 0 15 0zm-3.6 21.8L5.6 16l.8-.8 5 5L23 8.6l.8.8-12.4 12.4z" class="st0"/>
-</svg>
-                  </div><span>Хочу перейти на Omnicomm</span>
+                <div class="wrapper-advantage-btn_blue btn-tab-link current-f" data-tab="tab-1">
+                  <div class="icon-priemyschestva"></div><span>Хочу перейти на Omnicomm</span>
                 </div>
-                <div class="wrapper-advantage-btn_white">Новый клиент</div>
+                <div class="wrapper-advantage-btn_white btn-tab-link" data-tab="tab-2">
+                  <div class="icon-priemyschestva"></div><span>Новый клиент</span>
+                </div>
               </div>
               <div class="wrapper-ordering-advantage">
                 <div class="wrapper-ordering-advantage_title">Преимущества</div>
@@ -478,11 +476,70 @@
                 </div>
               </div>
               <div class="wrapper-ordering-form">
-                <div class="wrapper-ordering-form_form">
+                <div class="wrapper-ordering-form_form tab-content-f current-f" id="tab-1">
                   <form class="js-form">
                     <div class="box-input">
                       <div class="form-label">
                         <label class="input-label">ФИО<span>*</span></label>
+                      </div>
+                      <div class="form-input">
+                        <input class="input-box input-name" data-validation="length  required" type="text" data-validation-length="min3" data-validation-error-msg="Поле обязательно для заполнения">
+                      </div>
+                    </div>
+                    <div class="box-input">
+                      <div class="form-label">
+                        <label class="input-label">Организация</label>
+                      </div>
+                      <div class="form-input">
+                        <input class="input-box input-name" type="text">
+                      </div>
+                    </div>
+                    <div class="box-input">
+                      <div class="form-label">
+                        <label class="input-label">Телефон<span>*</span></label>
+                      </div>
+                      <div class="form-input">
+                        <input class="input-box input-name" type="tel" data-validation="custom" data-validation-regexp="^[-0-9()+ ]+$" data-validation-error-msg="Поле обязательно для заполнения">
+                      </div>
+                    </div>
+                    <div class="box-input">
+                      <div class="form-label">
+                        <label class="input-label">E-mail<span>*</span></label>
+                      </div>
+                      <div class="form-input">
+                        <input class="input-box input-name" data-validation="email" type="email" data-validation-error-msg="Поле обязательно для заполнения">
+                      </div>
+                    </div>
+                    <div class="box-input">
+                      <div class="form-label">
+                        <label class="input-label">Комментарий</label>
+                      </div>
+                      <div class="form-input">
+                        <textarea class="input-box textarea-box"></textarea>
+                      </div>
+                    </div>
+                    <!--        (data-validation="required" data-validation-error-msg="Message is not correct")-->
+                    <div class="box-check">
+                      <div class="input-wrapp block-check-inline">
+                        <input class="ch" type="checkbox" id="m1" data-validation="required" data-validation-error-msg="Поле обязательно для заполнения">
+                        <label for="m1">Даю согласие на обработку моих <a href="#"> <span> персональных данных *</span> </a></label>
+                      </div>
+                    </div>
+                    <div class="box-btn-form">
+                      <button class="btn-form" type="submit">Отправить заявку</button>
+                    </div>
+                    <!-- container modal window-->
+                    <div class="box-modal-ordering-form" style="display: none;">
+                      <div class="h3">Спасибо за обращение!</div>
+                      <p>Ваше сообщение успешно отправлено. <br> Наш оператор свяжется с вами в ближайшее время.</p>
+                    </div>
+                  </form>
+                </div>
+                <div class="wrapper-ordering-form_form tab-content-f" id="tab-2">
+                  <form class="js-form">
+                    <div class="box-input">
+                      <div class="form-label">
+                        <label class="input-label">ФИО2<span>*</span></label>
                       </div>
                       <div class="form-input">
                         <input class="input-box input-name" data-validation="length  required" type="text" data-validation-length="min3" data-validation-error-msg="Поле обязательно для заполнения">
@@ -869,11 +926,7 @@
     <div class="w-p" id="hidden-reach" style="display: none;">
       <div class="modal-container">
         <div class="wrapper-container_title">Как до нас добраться</div>
-        <div class="wrapper-maps">
-          <div class="container-maps" id="map">
-            <script src="js/map.js"></script>
-          </div>
-        </div>
+        <div class="wrapper-maps"><img src="img/map-img.jpg" alt=""></div>
         <div class="wrapper-content-right_txt">
           <ul>
             <li>Интерфейс взаимодействия с внешними устройствами RS-232 и RS-485</li>

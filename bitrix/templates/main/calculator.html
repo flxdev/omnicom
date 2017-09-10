@@ -323,19 +323,30 @@
                       </div>
                       <div class="container-fuel-control">
                         <div class="wrapper-advantage-btn">
-                          <div class="wrapper-advantage-btn_blue">
-                            <div class="icon-priemyschestva"><svg width="30" height="30" xmlns="http://www.w3.org/2000/svg">
-<g>
-<path d="m15,0c-8.3,0 -15,6.7 -15,15s6.7,15 15,15s15,-6.7 15,-15s-6.7,-15 -15,-15zm-3.6,21.8l-5.8,-5.8l0,0l0.8,-0.8l5,5l11.6,-11.6l0.8,0.8l-12.4,12.4z" class="st0"/>
-</g>
-</svg>
-                            </div><span>С контролем топлива</span>
+                          <div class="wrapper-advantage-btn_blue btn-tab-link current-f" data-tab="tab-1">
+                            <div class="icon-priemyschestva"></div><span>С контролем топлива</span>
                           </div>
-                          <div class="wrapper-advantage-btn_white">Без контроля топлива</div>
+                          <div class="wrapper-advantage-btn_white btn-tab-link" data-tab="tab-2">
+                            <div class="icon-priemyschestva"></div><span>Без контроля топлива</span>
+                          </div>
                         </div>
-                        <div class="wrapper-final-result">
+                        <div class="wrapper-final-result tab-content-f current-f" id="tab-1">
                           <div class="wrapper-final-result_box">
-                            <div class="wrapper-final-result_box_t">Экономия за месяц</div>
+                            <div class="wrapper-final-result_box_t">Экономия за месяц1</div>
+                            <div class="wrapper-final-result_box_r">226 800<span>руб</span></div>
+                          </div>
+                          <div class="wrapper-final-result_box">
+                            <div class="wrapper-final-result_box_t">Срок окупаемости</div>
+                            <div class="wrapper-final-result_box_r">6<span>месяцев</span></div>
+                          </div>
+                          <div class="wrapper-final-result_box">
+                            <div class="wrapper-final-result_box_t">Экономия за год</div>
+                            <div class="wrapper-final-result_box_r">2 721 600<span>руб</span></div>
+                          </div>
+                        </div>
+                        <div class="wrapper-final-result tab-content-f" id="tab-2">
+                          <div class="wrapper-final-result_box">
+                            <div class="wrapper-final-result_box_t">Экономия за месяц2</div>
                             <div class="wrapper-final-result_box_r">226 800<span>руб</span></div>
                           </div>
                           <div class="wrapper-final-result_box">
@@ -684,11 +695,7 @@
     <div class="w-p" id="hidden-reach" style="display: none;">
       <div class="modal-container">
         <div class="wrapper-container_title">Как до нас добраться</div>
-        <div class="wrapper-maps">
-          <div class="container-maps" id="map">
-            <script src="js/map.js"></script>
-          </div>
-        </div>
+        <div class="wrapper-maps"><img src="img/map-img.jpg" alt=""></div>
         <div class="wrapper-content-right_txt">
           <ul>
             <li>Интерфейс взаимодействия с внешними устройствами RS-232 и RS-485</li>

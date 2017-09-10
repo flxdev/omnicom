@@ -6,14 +6,12 @@ section.container-wrapper-ordering
         .wrapper-container_title Начните работать эффективно с Omnicomm
 
         .wrapper-advantage-btn
-            .wrapper-advantage-btn_blue
+            .wrapper-advantage-btn_blue.btn-tab-link.current-f(data-tab="tab-1")
                 .icon-priemyschestva
-                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 30 30">
-                    <style>.st0{fill:#062854;}</style>
-                    <path d="M15 0C6.7 0 0 6.7 0 15s6.7 15 15 15 15-6.7 15-15S23.3 0 15 0zm-3.6 21.8L5.6 16l.8-.8 5 5L23 8.6l.8.8-12.4 12.4z" class="st0"/>
-                    </svg>
                 span Хочу перейти на Omnicomm
-            .wrapper-advantage-btn_white Новый клиент
+            .wrapper-advantage-btn_white.btn-tab-link(data-tab="tab-2")
+                .icon-priemyschestva
+                span Новый клиент
 
         .wrapper-ordering-advantage
             .wrapper-ordering-advantage_title Преимущества
@@ -26,11 +24,57 @@ section.container-wrapper-ordering
                     li.revealator-slideright.revealator-delay8 Никаких подводных камней
 
         .wrapper-ordering-form
-            .wrapper-ordering-form_form
+            .wrapper-ordering-form_form.tab-content-f.current-f#tab-1
                 form.js-form
                     .box-input
                         .form-label
                             label.input-label ФИО<span>*</span>
+                        .form-input
+                            input(data-validation="length  required" type="text" data-validation-length='min3' data-validation-error-msg="Поле обязательно для заполнения").input-box.input-name
+
+                    .box-input
+                        .form-label
+                            label.input-label Организация
+                        .form-input
+                            input(type="text").input-box.input-name
+
+                    .box-input
+                        .form-label
+                            label.input-label Телефон<span>*</span>
+                        .form-input
+                            input(type="tel" data-validation="custom" data-validation-regexp="^[-0-9()+ ]+$" data-validation-error-msg="Поле обязательно для заполнения").input-box.input-name
+
+                    .box-input
+                        .form-label
+                            label.input-label E-mail<span>*</span>
+                        .form-input
+                            input(data-validation="email" type="email" data-validation-error-msg="Поле обязательно для заполнения").input-box.input-name
+
+                    .box-input
+                        .form-label
+                            label.input-label Комментарий
+                        .form-input
+                            textarea.input-box.textarea-box
+                    //        (data-validation="required" data-validation-error-msg="Message is not correct")
+                    .box-check
+                        .input-wrapp.block-check-inline
+                            input.ch(type='checkbox' id='m1' data-validation="required" data-validation-error-msg="Поле обязательно для заполнения")
+                            label(for='m1') Даю согласие на обработку моих <a href="#"> <span> персональных данных *</span> </a>
+
+                    .box-btn-form
+                        button(type='submit').btn-form Отправить заявку
+
+                    // container modal window
+                    .box-modal-ordering-form(style='display: none')
+                        .h3 Спасибо за обращение!
+                        p Ваше сообщение успешно отправлено. <br> Наш оператор свяжется с вами в ближайшее время.
+
+
+            .wrapper-ordering-form_form.tab-content-f#tab-2
+                form.js-form
+                    .box-input
+                        .form-label
+                            label.input-label ФИО2<span>*</span>
                         .form-input
                             input(data-validation="length  required" type="text" data-validation-length='min3' data-validation-error-msg="Поле обязательно для заполнения").input-box.input-name
 

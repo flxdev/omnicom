@@ -1060,6 +1060,10 @@
   }
 }
 
+.wrapper-maps > img{
+  width: 100%;
+}
+
 .wrapper-container-user{
   width: 100%;
   .block-expert{
@@ -1575,6 +1579,9 @@ body{
     margin-bottom: 35px;
     .wrapper-advantage-btn_white{
       border: 1px solid #ced5db;
+    }
+    .wrapper-advantage-btn_white.current-f{
+      border: 1px solid #002855;
     }
     .wrapper-advantage-btn_blue{
       border: 1px solid #002855;

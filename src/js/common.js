@@ -108,6 +108,18 @@ function initTabsTableProductInfo() {
     })
 }
 
+function initTabsForm(){
+    $('.wrapper-advantage-btn .btn-tab-link').click(function(){
+        var tab_id = $(this).attr('data-tab');
+
+        $('.wrapper-advantage-btn .btn-tab-link').removeClass('current-f');
+        $('.tab-content-f').removeClass('current-f');
+
+        $(this).addClass('current-f');
+        $("#"+tab_id).addClass('current-f');
+    })
+}
+
 function initDropShow () {
     $('.js-drop-open').each(function() {
         $(this).on('click', function() {
@@ -258,6 +270,8 @@ function initSliderTimerBig() {
         themeClass : 'default',
         fullWidth : true,
         fullHeight : true,
+        disableLoading: true,
+        background: ''
     });
 }
 
@@ -447,4 +461,5 @@ $(document).ready(function() {
     initPlayer();
     initValidForm();
     initAncour();
+    initTabsForm();
 });
