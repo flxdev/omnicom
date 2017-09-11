@@ -316,6 +316,9 @@
     width: 43px;
     height: 43px;
     border: 1px solid #f1f3f5;
+    &:hover{
+      border: 1px solid #d3e0e9;
+    }
     a{
       display: inline-block;
       width: 100%;
@@ -331,6 +334,7 @@
     }
   }
   .no-active{
+    border: 1px solid #f1f3f5 !important;
     a{
       display: block;
       cursor: default;
@@ -344,6 +348,9 @@
     width: 43px;
     height: 43px;
     border: 1px solid #f1f3f5;
+    &:hover{
+      border: 1px solid #d3e0e9;
+    }
     a{
       display: inline-block;
       width: 100%;
@@ -363,6 +370,9 @@
     height: 43px;
     border: 1px solid #f1f3f5;
     text-align: center;
+    &:hover{
+      border: 1px solid #d3e0e9;
+    }
     a{
       display: block;
       @include fontEtelkaLightPro;
@@ -387,6 +397,9 @@
     height: 43px;
     border: 1px solid #f1f3f5;
     text-align: center;
+    &:hover{
+      border: 1px solid #d3e0e9;
+    }
     a{
       display: block;
       @include fontEtelkaLightPro;
@@ -1568,6 +1581,11 @@ body{
         }
       }
     }
+    .box-input.has-error{
+      input{
+        border-color: #eb1c22 !important;
+      }
+    }
   }
 }
 
@@ -1594,12 +1612,7 @@ body{
     .wrapper-final-result_box{
       @include display-inline-top;
       margin-bottom: 40px;
-      &:nth-child(1n){
-        width: 70%;
-      }
-      &:nth-child(2n){
-        width: 30%;
-      }
+      width: 100%;
       .wrapper-final-result_box_t{
         @include fontEtelkaLightPro;
         font-size: 14px;

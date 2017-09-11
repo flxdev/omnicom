@@ -214,10 +214,11 @@
 
 .wrapper-container-big-number{
   font-size: 0;
-  margin-bottom: 55px;
+  margin-bottom: 5px;
   .container-big-number{
     @include display-inline-top;
     width: 45%;
+    margin-bottom: 50px;
     .container-big-number_number{
       @include fontEtelkaMediumPro;
       color: #002855;
@@ -385,11 +386,21 @@
 .w-p{
   width: 800px;
   padding: 65px 40px 40px 40px;
-  .fancybox-close-small:after{
-    color: black;
+  .fancybox-close-small{
     top: 15px;
     right: 35px;
+    border: none;
+    &:focus{
+      outline: none;
+    }
+  }
+  .fancybox-close-small:after{
+    color: black;
+    top: 7px;
+    right: 7px;
     font: 30px/30px Arial,Helvetica Neue,Helvetica,sans-serif;
+    border: none;
+    vertical-align: middle;
   }
   .wrapper-container_title{
     margin-left: 0;

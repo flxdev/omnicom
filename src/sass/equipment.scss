@@ -282,16 +282,33 @@
 }
 
 .wrapper-card-product_left{
-  //float: left;
-  width: 22%;
-  position: relative;
+  width: 18%;
+  position: absolute;
   float: left;
   z-index: 5;
+  height: 100%;
+}
+
+.block-sticky{
+  position: -webkit-sticky;
+  position: sticky;
+  top: 120px;
+  margin-bottom: 80px;
+  background-color: white;
+  &:before{
+    content: '';
+    display: table;
+  }
+  &:after{
+    content: '';
+    display: table;
+  }
 }
 
 .wrapper-card-product_left-menu{
   width: 100%;
   margin-bottom: 70px;
+
   .block-product-menu{
     &:first-child{
       border-left: 1px solid #e5e7e9;

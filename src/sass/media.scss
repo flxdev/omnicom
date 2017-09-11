@@ -7,7 +7,7 @@
       width: 1280px;
     }
   }
-  .block-header, .wrapper-ordering, .footer-wrapper, .wrapper-main, .wrapper-content-slider, .map-site-content_content{
+  .block-header, .wrapper-ordering, .footer-wrapper, .wrapper-main, .wrapper-content-slider, .map-site-content_content, .white-img .wrapper-content-slider{
     width: 1280px;
   }
   .wrapper-counter{
@@ -33,6 +33,21 @@
       }
     }
   }
+
+  .white-img{
+    .wrapper-content-slider{
+      .wrapper-content-slider_text{
+        margin-right: 37%;
+      }
+    }
+  }
+
+  .wrapper-content-slider{
+    .wrapper-content-slider_text{
+      margin-right: 37%;
+    }
+  }
+
 }
 
 @media all and (max-width: 1281px){
@@ -245,6 +260,20 @@
     table{
       .box-td{
         padding: 14px 40px 14px 0;
+      }
+    }
+  }
+
+  .wrapper-content-slider{
+    .wrapper-content-slider_text{
+      padding: 0 0px 75px;
+    }
+  }
+
+  .white-img{
+    .wrapper-content-slider{
+      .wrapper-content-slider_text{
+        padding: 0 65px 85px;
       }
     }
   }
@@ -589,13 +618,54 @@
   .block-text-info{
     margin-left: 0;
   }
+
+  .white-img{
+    .wrapper-content-slider{
+      .wrapper-content-slider_text{
+        padding: 0 20px 85px;
+      }
+    }
+  }
 }
 
 .container-top-block_icon-mobile{
   display: none;
 }
+
 .block-header-logo_txt{
   display: none;
+  font-size: 0;
+  .block-header-logo_logo{
+    @include display-inline-middle;
+    @include fontEtelkaTextBoldPro;
+    color: #002855;
+    font-size: 14px;
+    text-transform: uppercase;
+    border-right: 1px solid #d4d6d7;
+    padding-right: 10px;
+    margin-right: 10px;
+  }
+  .block-header-logo_dealer{
+    @include display-inline-middle;
+    .icon-dealer{
+      width: 30px;
+      height: 30px;
+      @include display-inline-middle;
+      margin-right: 6px;
+      svg{
+        width: 100%;
+        height: 100%;
+      }
+
+    }
+    .dealer-txt{
+      @include fontEtelkaMediumPro;
+      @include display-inline-middle;
+      font-size: 9px;
+      color: #fb4614;
+      text-transform: uppercase;
+    }
+  }
 }
 
 @media all and (max-width: 930px){
@@ -623,6 +693,28 @@
     .footer-wrapper_cop{
       margin-right: 3%;
     }
+  }
+
+  .white-img{
+    .wrapper-content-slider{
+      width: 100%;
+      .wrapper-content-slider_text{
+        margin-right: 0;
+        width: 100%;
+      }
+    }
+  }
+
+  .wrapper-content-slider{
+    .wrapper-content-slider_text{
+      margin-right: 0;
+    }
+  }
+  .block-header-logo_img{
+    display: none !important;
+  }
+  .block-header-logo_txt{
+    display: block !important;
   }
 }
 

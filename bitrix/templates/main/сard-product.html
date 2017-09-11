@@ -161,7 +161,7 @@
           <div class="block-header-menu">
             <nav class="js-menu-category">
               <ul class="menu_categories">
-                <li><a class="active-link" href="#" data-index="1">О компании</a></li>
+                <li><a class="active-link active-point" href="#" data-index="1">О компании</a></li>
                 <li class="hidden-menu"><a class="active-link" href="#">Omnicomm online</a></li>
                 <li class="hidden-menu"><a class="active-link" href="#" data-index="2">Оборудование</a></li>
                 <li><a class="active-link" href="#" data-index="3">Решения</a></li>
@@ -246,32 +246,34 @@
           <section class="container-wrapper-card-product">
             <div class="wrapper-card-product">
               <div class="wrapper-card-product_left">
-                <div class="wrapper-card-product_left-menu">
-                  <div class="block-product-menu"><a class="block-product-menu_title active-block" href="#">Датчики уровня топлива</a>
-                    <div class="block-product-menu_list">
-                      <ul>
-                        <li><a class="block-product-menu_link" href="#">Omnicomm LLS 30160</a></li>
-                        <li><a class="block-product-menu_link" href="#">Omnicomm LLS 20230</a></li>
-                        <li><a class="block-product-menu_link" href="#">Omnicomm LLS-AF 20310</a></li>
-                      </ul>
+                <div class="block-sticky">
+                  <div class="wrapper-card-product_left-menu">
+                    <div class="block-product-menu"><a class="block-product-menu_title active-block" href="#">Датчики уровня топлива</a>
+                      <div class="block-product-menu_list">
+                        <ul>
+                          <li><a class="block-product-menu_link" href="#">Omnicomm LLS 30160</a></li>
+                          <li><a class="block-product-menu_link" href="#">Omnicomm LLS 20230</a></li>
+                          <li><a class="block-product-menu_link" href="#">Omnicomm LLS-AF 20310</a></li>
+                        </ul>
+                      </div>
                     </div>
-                  </div>
-                  <div class="block-product-menu"><a class="block-product-menu_title" href="#">Терминалы</a>
-                    <div class="block-product-menu_list" style="display:none;">
-                      <ul>
-                        <li><a class="block-product-menu_link" href="#">Omnicomm LLS 30160</a></li>
-                        <li><a class="block-product-menu_link" href="#">Omnicomm LLS 20230</a></li>
-                        <li><a class="block-product-menu_link" href="#">Omnicomm LLS-AF 20310</a></li>
-                      </ul>
+                    <div class="block-product-menu"><a class="block-product-menu_title" href="#">Терминалы</a>
+                      <div class="block-product-menu_list" style="display:none;">
+                        <ul>
+                          <li><a class="block-product-menu_link" href="#">Omnicomm LLS 30160</a></li>
+                          <li><a class="block-product-menu_link" href="#">Omnicomm LLS 20230</a></li>
+                          <li><a class="block-product-menu_link" href="#">Omnicomm LLS-AF 20310</a></li>
+                        </ul>
+                      </div>
                     </div>
-                  </div>
-                  <div class="block-product-menu"><a class="block-product-menu_title" href="#">Дополнительное оборудование</a>
-                    <div class="block-product-menu_list" style="display:none;">
-                      <ul>
-                        <li><a class="block-product-menu_link" href="#">Omnicomm LLS 30160</a></li>
-                        <li><a class="block-product-menu_link" href="#">Omnicomm LLS 20230</a></li>
-                        <li><a class="block-product-menu_link" href="#">Omnicomm LLS-AF 20310</a></li>
-                      </ul>
+                    <div class="block-product-menu"><a class="block-product-menu_title" href="#">Дополнительное оборудование</a>
+                      <div class="block-product-menu_list" style="display:none;">
+                        <ul>
+                          <li><a class="block-product-menu_link" href="#">Omnicomm LLS 30160</a></li>
+                          <li><a class="block-product-menu_link" href="#">Omnicomm LLS 20230</a></li>
+                          <li><a class="block-product-menu_link" href="#">Omnicomm LLS-AF 20310</a></li>
+                        </ul>
+                      </div>
                     </div>
                   </div>
                 </div>
@@ -539,90 +541,92 @@
           <section class="container-wrapper-ordering" id="containerForm">
             <div class="wrapper-ordering">
               <div class="wrapper-container_title">Оформление заказа</div>
-              <div class="wrapper-ordering-advantage">
-                <div class="wrapper-ordering-advantage_title">Преимущества</div>
-                <div class="wrapper-ordering-advantage_list">
-                  <ul>
-                    <li class="revealator-slideright">Подключение за 1 рабочий день</li>
-                    <li class="revealator-slideright revealator-delay2">Выезда специалиста “завтра”</li>
-                    <li class="revealator-slideright revealator-delay4">Компенсируем стоимость перехода</li>
-                    <li class="revealator-slideright revealator-delay6">Первый месяц бесплатное обслуживание</li>
-                    <li class="revealator-slideright revealator-delay8">Никаких подводных камней</li>
-                  </ul>
-                </div>
-              </div>
               <div class="wrapper-ordering-form">
-                <div class="wrapper-ordering-form_form">
-                  <form class="js-form">
-                    <div class="box-input">
-                      <div class="form-label">
-                        <label class="input-label">ФИО<span>*</span></label>
-                      </div>
-                      <div class="form-input">
-                        <input class="input-box" data-validation="required" type="text" data-validation-error-msg="Name is not correct">
-                      </div>
+                <div class="wrapper-tab tab-content-f current-f" id="tab-1">
+                  <div class="wrapper-ordering-advantage">
+                    <div class="wrapper-ordering-advantage_title">Преимущества</div>
+                    <div class="wrapper-ordering-advantage_list">
+                      <ul class="revealator-slideright revealator-delay2 revealator-once">
+                        <li>Подключение за 1 рабочий день</li>
+                        <li>Выезда специалиста “завтра”</li>
+                        <li>Компенсируем стоимость перехода</li>
+                        <li>Первый месяц бесплатное обслуживание</li>
+                        <li>Никаких подводных камней</li>
+                      </ul>
                     </div>
-                    <div class="box-input">
-                      <div class="form-label">
-                        <label class="input-label">Организация</label>
-                      </div>
-                      <div class="form-input">
-                        <input class="input-box" type="text">
-                      </div>
-                    </div>
-                    <div class="box-input">
-                      <div class="form-label">
-                        <label class="input-label">Телефон<span>*</span></label>
-                      </div>
-                      <div class="form-input">
-                        <input class="input-box" data-validation="required" type="text" data-validation-error-msg="Name is not correct">
-                      </div>
-                    </div>
-                    <div class="box-input">
-                      <div class="form-label">
-                        <label class="input-label">E-mail<span>*</span></label>
-                      </div>
-                      <div class="form-input">
-                        <input class="input-box" data-validation="email required" type="text" data-validation-error-msg="Name is not correct">
-                      </div>
-                    </div>
-                    <div class="box-input-t">
-                      <div class="box-input w-80">
+                  </div>
+                  <div class="wrapper-ordering-form_form">
+                    <form class="js-form">
+                      <div class="box-input">
                         <div class="form-label">
-                          <label class="input-label">Наименование товара</label>
+                          <label class="input-label">ФИО<span>*</span></label>
                         </div>
                         <div class="form-input">
-                          <input class="input-box js-name" type="text">
-                          <input class="js-id" type="text" style="display:none;">
+                          <input class="input-box" data-validation="required" type="text" data-validation-error-msg="Name is not correct">
                         </div>
                       </div>
-                      <div class="box-input w-20">
+                      <div class="box-input">
                         <div class="form-label">
-                          <label class="input-label">Количество</label>
+                          <label class="input-label">Организация</label>
                         </div>
                         <div class="form-input">
                           <input class="input-box" type="text">
                         </div>
                       </div>
-                    </div>
-                    <div class="box-input">
-                      <div class="form-label">
-                        <label class="input-label">Комментарий</label>
+                      <div class="box-input">
+                        <div class="form-label">
+                          <label class="input-label">Телефон<span>*</span></label>
+                        </div>
+                        <div class="form-input">
+                          <input class="input-box" data-validation="required" type="text" data-validation-error-msg="Name is not correct">
+                        </div>
                       </div>
-                      <div class="form-input">
-                        <textarea class="input-box textarea-box" data-validation="required" data-validation-error-msg="Message is not correct"></textarea>
+                      <div class="box-input">
+                        <div class="form-label">
+                          <label class="input-label">E-mail<span>*</span></label>
+                        </div>
+                        <div class="form-input">
+                          <input class="input-box" data-validation="email required" type="text" data-validation-error-msg="Name is not correct">
+                        </div>
                       </div>
-                    </div>
-                    <div class="box-check">
-                      <div class="input-wrapp">
-                        <input class="ch" type="checkbox" id="m2">
-                        <label for="m2">Даю согласие на обработку моих <a href="#"> <span> персональных данных *</span> </a></label>
+                      <div class="box-input-t">
+                        <div class="box-input w-80">
+                          <div class="form-label">
+                            <label class="input-label">Наименование товара</label>
+                          </div>
+                          <div class="form-input">
+                            <input class="input-box js-name" type="text">
+                            <input class="js-id" type="text" style="display:none;">
+                          </div>
+                        </div>
+                        <div class="box-input w-20">
+                          <div class="form-label">
+                            <label class="input-label">Количество</label>
+                          </div>
+                          <div class="form-input">
+                            <input class="input-box" type="text">
+                          </div>
+                        </div>
                       </div>
-                    </div>
-                    <div class="box-btn-form">
-                      <button class="btn-form">Отправить заявку</button>
-                    </div>
-                  </form>
+                      <div class="box-input">
+                        <div class="form-label">
+                          <label class="input-label">Комментарий</label>
+                        </div>
+                        <div class="form-input">
+                          <textarea class="input-box textarea-box" data-validation="required" data-validation-error-msg="Message is not correct"></textarea>
+                        </div>
+                      </div>
+                      <div class="box-check">
+                        <div class="input-wrapp">
+                          <input class="ch" type="checkbox" id="m2">
+                          <label for="m2">Даю согласие на обработку моих <a href="#"> <span> персональных данных *</span> </a></label>
+                        </div>
+                      </div>
+                      <div class="box-btn-form">
+                        <button class="btn-form">Отправить заявку</button>
+                      </div>
+                    </form>
+                  </div>
                 </div>
               </div>
             </div>

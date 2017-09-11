@@ -49,12 +49,19 @@ h1{
   padding: 15px 25px;
   top: 0;
   right: 0;
+  &:hover{
+    span{
+      color: #fb4716;
+      border-color: #fb4716;
+    }
+  }
   span{
     @include fontEtelkaTextPro;
     font-size: 16px;
     color: white;
     border-bottom: 2px dotted white;
     padding-bottom: 2px;
+    @include hover-time-all;
   }
 }
 
@@ -436,9 +443,12 @@ h1{
   @include fontEtelkaLightPro;
   font-size: 16px;
   background: white;
-  padding: 12px 18px;
+  padding: 6px 18px;
   cursor: pointer;
   .icon-priemyschestva{
+    height: 30px;
+    display: inline-block;
+    vertical-align: middle;
     &:before{
       display: none;
     }
@@ -451,8 +461,13 @@ h1{
   @include fontEtelkaLightPro;
   font-size: 16px;
   background: white;
-  padding: 12px 18px;
+  padding: 6px 18px;
   cursor: pointer;
+  .icon-priemyschestva{
+    height: 30px;
+    display: inline-block;
+    vertical-align: middle;
+  }
 }
 
 .wrapper-advantage-btn_white.current-f{
@@ -587,6 +602,13 @@ h1{
   position: relative;
   overflow: hidden;
   .swiper-wrapper{
+    .swiper-slide{
+      &:hover{
+        .swiper-block-content-link, .swiper-block-content_title{
+          color: #fb4614;
+        }
+      }
+    }
     .swiper-block-content-img{
       width: 100%;
       height: 200px;
@@ -636,6 +658,7 @@ h1{
       padding: 7px 14px;
       margin-bottom: 30px;
       display: inline-block;
+      @include hover-time;
     }
     .swiper-block-content{
       .swiper-block-content_number{
@@ -660,6 +683,7 @@ h1{
         font-size: 24px;
         color: #2b2c2d;
         margin-bottom: 22px;
+        @include hover-time;
       }
       .swiper-block-content_txt{
         @include fontEtelkaLightPro;
@@ -939,6 +963,9 @@ h1{
   .sangar-content{
     width: 100%;
   }
+  .sangar-content >img{
+    height: 100% !important;
+  }
   .sangar-slideshow-container>.default .sangar-pagination-wrapper{
     background: none;
     opacity: 1 !important;
@@ -982,14 +1009,45 @@ h1{
   position: relative;
   width: 1440px;
   margin: 0 auto;
-  padding: 80px 120px 65px;
+  padding: 80px 70px 65px;
   height: 100%;
+  .wrapper-content-slider_text{
+    padding: 0px 50px 75px;
+    margin-top: 20vh;
+    margin-right: 41%;
+  }
   .h1{
     @include fontEtelkaMediumPro;
+    margin-top: 0;
     color: white;
-    padding-top: 20vh;
-    margin-bottom: 50px;
+    padding-top: 50px;
     font-size: 48px;
+  }
+  .h1 + .btn-form{
+    margin-top: 45px;
+    display: inline-block;
+  }
+}
+
+.white-img{
+  .wrapper-content-slider{
+    position: relative;
+    width: 1440px;
+    margin: 0 auto;
+    height: 100%;
+    .wrapper-content-slider_text{
+      background-color: #002855;
+      padding: 0px 50px 85px;
+      margin-top: 20vh;
+      margin-right: 41%;
+    }
+    .h1{
+      @include fontEtelkaMediumPro;
+      margin-top: 0;
+      color: white;
+      padding-top: 50px;
+      font-size: 48px;
+    }
   }
 }
 
@@ -1047,6 +1105,10 @@ h1{
       @include fontEtelkaLightPro;
       font-size: 16px;
       color: #616365;
+      @include hover-time;
+      &:hover{
+        color: #fb4614;
+      }
     }
   }
 }
@@ -1205,6 +1267,10 @@ h1{
         @include fontEtelkaLightPro;
         font-size: 16px;
         color: #616365;
+        @include hover-time;
+        &:hover{
+          color: #fb4614;
+        }
       }
     }
   }
@@ -1229,7 +1295,10 @@ h1{
         color: black;
         display: block;
         margin-bottom: 6px;
-
+        @include hover-time;
+        &:hover{
+          color: #fb4614;
+        }
       }
       .wrapper-telefon-header_link-email{
         @include fontEtelkaLightPro;
@@ -1522,4 +1591,15 @@ h1{
 
 .tab-content-f{
   display: none;
+}
+
+.active-point{
+  border-bottom: 2px solid #fb4614 !important;
+  color: #fb4614 !important;
+}
+
+.wrapper-tab#tab-2{
+  .wrapper-ordering-advantage{
+
+  }
 }

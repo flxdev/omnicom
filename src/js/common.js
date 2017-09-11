@@ -80,9 +80,9 @@ function initMenu() {
     })
 }
 
-// function initStickyHeader() {
-//     $('.sticky').Stickyfill();
-// }
+function initStickyLeftMenu() {
+    $('.wrapper-card-product_left-menu').Stickyfill();
+}
 
 function initTabsCardProductInfo() {
     $('ul.tabs-menu li').click(function(){
@@ -117,6 +117,10 @@ function initTabsForm(){
 
         $(this).addClass('current-f');
         $("#"+tab_id).addClass('current-f');
+
+        $('.wrapper-ordering-advantage_list > ul').removeClass('animated bounceInLeft');
+        $('.wrapper-ordering-advantage_list > ul').addClass('animated bounceInLeft');
+
     })
 }
 
@@ -271,6 +275,7 @@ function initSliderTimerBig() {
         fullWidth : true,
         fullHeight : true,
         disableLoading: true,
+        pauseOnHover: false,
         background: ''
     });
 }
@@ -288,27 +293,13 @@ function initSliderTimerSmall() {
         themeClass : 'default',
         fullWidth : true,
         fullHeight : false,
+        pauseOnHover: false,
         height : 405, // slideshow height
     });
 }
 
 function initScrollOrdering() {
-    Revealator.effects_padding = '180';
-}
-
-function initscrollHeader() {
-    var headerTopHeight = 50;
-
-    $(window).scroll(function(){
-        var st = $(this).scrollTop();
-        if (st > headerTopHeight) {
-            $('.container-header-top').css('margin-top', '-50px');
-            $('.container-main-big .sangar-timer').css('top', '0');
-        } else {
-            $('.container-header-top').css('margin-top', '0');
-            $('.container-main-big .sangar-timer').css('top', '128px');
-        }
-    });
+    Revealator.effects_padding = '10';
 }
 
 function initNoClass() {
@@ -373,13 +364,96 @@ $(window).on('resize', function() {
     }
 });
 
-function initPlayer(){
-    // var players = document.querySelectorAll('video-wrap');
-    // var lngth = players.length;
-    // for (var i = 1, i<= lngth, i++){
-    // 	var video = player[i].querySelector('iframe');
+if ($(window).width() < 930) {
+    function initscrollHeader() {
+        var headerTopHeight = 50;
 
-    // }
+        $(window).scroll(function(){
+            var st = $(this).scrollTop();
+            if (st > headerTopHeight) {
+                $('.container-header-top').css('margin-top', '-50px');
+                $('.container-main-big .sangar-timer').css('top', '0');
+                $('.block-header-logo_txt').css('display', 'block');
+            } else {
+                $('.container-header-top').css('margin-top', '0');
+                $('.container-main-big .sangar-timer').css('top', '128px');
+                $('.block-header-logo_img').css('display', 'none');
+                $('.block-header-logo_txt').css('display', 'block');
+            }
+        });
+    }
+
+    initscrollHeader();
+}
+$(window).on('resize', function() {
+    if ($(window).width() < 930) {
+        function initscrollHeader() {
+            var headerTopHeight = 50;
+
+            $(window).scroll(function(){
+                var st = $(this).scrollTop();
+                if (st > headerTopHeight) {
+                    $('.container-header-top').css('margin-top', '-50px');
+                    $('.container-main-big .sangar-timer').css('top', '0');
+                    $('.block-header-logo_txt').css('display', 'block');
+                } else {
+                    $('.container-header-top').css('margin-top', '0');
+                    $('.container-main-big .sangar-timer').css('top', '128px');
+                    $('.block-header-logo_img').css('display', 'none');
+                    $('.block-header-logo_txt').css('display', 'block');
+                }
+            });
+        }
+        initscrollHeader();
+    }
+});
+
+if ($(window).width() >= 931) {
+    function initscrollHeader() {
+        var headerTopHeight = 50;
+
+        $(window).scroll(function(){
+            var st = $(this).scrollTop();
+            if (st > headerTopHeight) {
+                $('.container-header-top').css('margin-top', '-50px');
+                $('.container-main-big .sangar-timer').css('top', '0');
+                $('.block-header-logo_img').css('display', 'none');
+                $('.block-header-logo_txt').css('display', 'block');
+            } else {
+                $('.container-header-top').css('margin-top', '0');
+                $('.container-main-big .sangar-timer').css('top', '128px');
+                $('.block-header-logo_img').css('display', 'block');
+                $('.block-header-logo_txt').css('display', 'none');
+            }
+        });
+    }
+    initscrollHeader();
+}
+$(window).on('resize', function() {
+    if ($(window).width() >= 931) {
+        function initscrollHeader() {
+            var headerTopHeight = 50;
+
+            $(window).scroll(function(){
+                var st = $(this).scrollTop();
+                if (st > headerTopHeight) {
+                    $('.container-header-top').css('margin-top', '-50px');
+                    $('.container-main-big .sangar-timer').css('top', '0');
+                    $('.block-header-logo_img').css('display', 'none');
+                    $('.block-header-logo_txt').css('display', 'block');
+                } else {
+                    $('.container-header-top').css('margin-top', '0');
+                    $('.container-main-big .sangar-timer').css('top', '128px');
+                    $('.block-header-logo_img').css('display', 'block');
+                    $('.block-header-logo_txt').css('display', 'none');
+                }
+            });
+        }
+        initscrollHeader();
+    }
+});
+
+function initPlayer(){
     var players = $('.block-video');
     players.each(function(){
         var _ = $(this);
@@ -438,6 +512,14 @@ function initAncour() {
     });
 }
 
+function initLeftMenuHeight() {
+    var menuHeight = $('.wrapper-card-product_left').height();
+
+    if(menuHeight > 450){
+        $('.wrapper-contant-right').css('min-height', '800px');
+    }
+}
+
 $(document).ready(function() {
     initSetting();
     initMenu();
@@ -454,12 +536,11 @@ $(document).ready(function() {
     initSliderSmall();
     initSliderTimerSmall();
     initSliderTimerBig();
-    initscrollHeader();
+    // initscrollHeader();
     initSliderList();
     initSelect();
     initSearchMapSite();
-    initPlayer();
-    initValidForm();
-    initAncour();
     initTabsForm();
+    initStickyLeftMenu();
+    initLeftMenuHeight();
 });
