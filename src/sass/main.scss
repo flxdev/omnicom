@@ -95,7 +95,7 @@ h1{
       }
     }
   }
-  a{
+  span{
     @include fontEtelkaLightPro;
     font-size: 14px;
     color: #fb4614;
@@ -802,7 +802,7 @@ h1{
         @include display-inline-middle;
         margin-right: 5px;
       }
-      a{
+      .dealer-txt{
         @include fontEtelkaLightPro;
         @include display-inline-middle;
         font-size: 12px;
@@ -1189,6 +1189,7 @@ h1{
       border-right: 1px solid #d4d6d7;
       padding-right: 10px;
       margin-right: 10px;
+      width: 108px;
     }
     .block-header-logo_dealer{
       @include display-inline-middle;

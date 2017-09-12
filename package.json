@@ -1,8 +1,8 @@
 {
-  "name": "Sweelemk-Project",
+  "name": "Servolux",
   "version": "0.0.1",
   "description": "Gulp template",
-  "author": "Sweelemk",
+  "author": "Servolux",
   "repository": {
     "type": "git",
     "url": "https://github.com/sweelemk/gulp-pug"
@@ -16,6 +16,7 @@
     "gulp": "~3.9.1",
     "gulp-consolidate": "~0.2.0",
     "gulp-copy": "1.0.0",
+    "gulp-eslint": "^3.0.1",
     "gulp-iconfont": "~8.0.1",
     "gulp-include": "~2.3.0",
     "gulp-inject": "^4.2.0",
@@ -24,7 +25,6 @@
     "gulp-postcss": "~6.3.0",
     "gulp-pug": "~3.2.0",
     "gulp-rename": "^1.2.2",
-    "gulp-sass": "~3.1.0",
     "gulp-sourcemaps": "~2.4.1",
     "gulp-svgmin": "^1.2.3",
     "gulp-svgstore": "^6.1.0",
@@ -32,8 +32,13 @@
     "gulp.spritesmith": "~6.3.0",
     "lodash": "~4.17.4",
     "path": "^0.12.7",
+    "postcss-css-variables": "^0.7.0",
     "postcss-svg": "~1.0.6",
     "require-dir": "~0.3.0",
     "rimraf": "~2.5.2"
+  },
+  "dependencies": {
+    "gulp-sass": "^3.1.0",
+    "nan": "^2.6.2"
   }
 }

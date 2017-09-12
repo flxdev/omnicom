@@ -895,6 +895,13 @@ table.table{
       color: #002855;
       text-align: left;
       padding: 16px 0 30px 0;
+      a{
+        color: #002855;
+        @include hover-time;
+        &:hover{
+          color: #fb4614;
+        }
+      }
     }
   }
   .table__tbody{
@@ -917,7 +924,13 @@ table.table{
       padding: 16px 23px 16px 0;
       line-height: 1.5;
       .table__mobile-caption{
-
+        a{
+          color: #002855;
+          @include hover-time;
+          &:hover{
+            color: #fb4614;
+          }
+        }
       }
       .table__txt{
         @include fontEtelkaLightPro;
