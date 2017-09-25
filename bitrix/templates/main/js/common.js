@@ -496,7 +496,6 @@ function initValidForm() {
             });
         });
     }
-
 }
 
 function initAncour() {
@@ -525,19 +524,34 @@ function initLeftMenuHeight() {
     }
 }
 
+function scrollUp() {
+    $('.container-scroll-top').click(function () {
+        $('body,html').animate({scrollTop:0},800);
+    });
+
+    $(window).scroll(function(){
+        if ( $(document).scrollTop() > 300 ) {
+            $('.container-scroll-top').fadeIn('fast');
+        } else {
+            $('.container-scroll-top').fadeOut('fast');
+        }
+    });
+}
+
 function initStopSticky() {
     var distanceBlock = $('.wrapper-tab-table-content');
-    var distanceOffset = distanceBlock.offset();
-    var distanceOffsetTop = distanceOffset.top;
-    var basicHeight = $('.container-wrapper-header-title').height() + $('.container-wrapper-card-product').height();
-    var marginBottom = basicHeight - distanceOffsetTop;
 
     if (distanceBlock.length){
+        var distanceOffset = distanceBlock.offset();
+        var distanceOffsetTop = distanceOffset.top;
+        var basicHeight = $('.container-wrapper-header-title').height() + $('.container-wrapper-card-product').height();
+        var marginBottom = basicHeight - distanceOffsetTop;
         $('.block-sticky').css({
             "margin-bottom": marginBottom
         })
     }
 }
+
 
 $(document).ready(function() {
     initSetting();
@@ -548,14 +562,12 @@ $(document).ready(function() {
     initSliderText();
     initMasonryNews();
     initSliderProduct();
-// initTelefon();
     initScrollOrdering();
     focusInput();
     initSliderR();
     initSliderSmall();
     initSliderTimerSmall();
     initSliderTimerBig();
-    // initscrollHeader();
     initSliderList();
     initSelect();
     initSearchMapSite();
@@ -563,4 +575,6 @@ $(document).ready(function() {
     initStickyLeftMenu();
     initLeftMenuHeight();
     initStopSticky();
+    initAncour();
+    scrollUp();
 });

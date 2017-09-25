@@ -284,15 +284,21 @@
   border-width: 0;
   background: #fff;
   transition: background .25s;
-  box-sizing: border-box;
-  z-index: 2; }
+  /*box-sizing: border-box;*/
+  z-index: 2;
+  box-shadow: none !important;
+}
 
 .fancybox-close-small:focus:after {
-  outline: 1px dotted #888; }
+  box-shadow: none !important;
+}
+
 
 .fancybox-close-small:hover:after {
   color: #555;
-  background: #eee; }
+  background: #eee;
+  box-shadow: none !important;
+}
 
 .fancybox-slide--iframe .fancybox-close-small {
   top: 0;
