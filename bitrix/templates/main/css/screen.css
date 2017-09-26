@@ -5215,7 +5215,8 @@ h1 {
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
-  display: flex; }
+  display: flex;
+  position: relative; }
 
 .wrapper-counter {
   -webkit-align-content: stretch;
@@ -6003,6 +6004,63 @@ h1 {
       .container-scroll-top .btn-scroll-top svg .st0 {
         fill: #F64224; }
 
+.p-img {
+  width: 650px;
+  background-color: inherit;
+  padding: 0;
+  overflow: hidden;
+  padding-left: 30px;
+  padding-right: 30px; }
+  .p-img .fancybox-close-small:after {
+    background-color: inherit;
+    color: black;
+    font: 30px/40px Arial,Helvetica Neue,Helvetica,sans-serif; }
+  .p-img .fancybox-close-small {
+    right: 30px; }
+
+.wrapper-slider-preview .wrapper-card-product-info_slider {
+  width: 100%;
+  margin-bottom: 60px;
+  margin-right: 0; }
+  .wrapper-slider-preview .wrapper-card-product-info_slider .gallery-top2 {
+    width: 100%;
+    margin-bottom: 10px; }
+    .wrapper-slider-preview .wrapper-card-product-info_slider .gallery-top2 .swiper-slide img {
+      width: 100%; }
+  .wrapper-slider-preview .wrapper-card-product-info_slider .gallery-thumbs2 .swiper-slide-active {
+    opacity: 1;
+    border: 3px solid #000; }
+  .wrapper-slider-preview .wrapper-card-product-info_slider .gallery-thumbs2 .swiper-slide {
+    width: 10%;
+    height: 100%;
+    opacity: 1;
+    cursor: pointer; }
+  .wrapper-slider-preview .wrapper-card-product-info_slider .swiper-button-prev2 {
+    background-image: none;
+    -webkit-transform: rotate(180deg);
+    -ms-transform: rotate(180deg);
+    transform: rotate(180deg);
+    width: 9px;
+    height: 16px;
+    top: auto;
+    bottom: 25px;
+    left: -27px;
+    cursor: pointer;
+    position: absolute; }
+    .wrapper-slider-preview .wrapper-card-product-info_slider .swiper-button-prev2 .st0 {
+      fill: #fff; }
+  .wrapper-slider-preview .wrapper-card-product-info_slider .swiper-button-next2 {
+    background-image: none;
+    width: 9px;
+    height: 16px;
+    top: auto;
+    bottom: 25px;
+    right: -27px;
+    cursor: pointer;
+    position: absolute; }
+    .wrapper-slider-preview .wrapper-card-product-info_slider .swiper-button-next2 .st0 {
+      fill: #fff; }
+
 .container-header-top {
   width: 100%;
   position: fixed;
@@ -6067,7 +6125,8 @@ h1 {
   position: absolute;
   width: 36px;
   top: 27px;
-  right: 25px; }
+  right: 25px;
+  height: 24px; }
   .block-map-site .st0 {
     fill: #002855;
     -webkit-transition: all 0.5s ease-out;

@@ -701,6 +701,7 @@ h1{
 .wrapper-counter-text{
   width: 100%;
   display: flex;
+  position: relative;
 }
 
 .wrapper-counter{
@@ -714,6 +715,8 @@ h1{
     text-align: center;
     padding: 85px 20px 0 20px;
     position: relative;
+    //position: -webkit-sticky;
+    //position: sticky;
     .block-counter_percent{
       @include fontEtelkaLightPro;
       font-size: 50px;
@@ -1656,5 +1659,78 @@ h1{
        fill: #F64224;
      }
    }
+  }
+}
+
+.p-img{
+  width: 650px;
+  background-color: inherit;
+  padding: 0;
+  overflow: hidden;
+  padding-left: 30px;
+  padding-right: 30px;
+  .fancybox-close-small:after{
+    background-color: inherit;
+    color: black;
+    font: 30px/40px Arial,Helvetica Neue,Helvetica,sans-serif;
+  }
+  .fancybox-close-small{
+    right: 30px;
+  }
+}
+
+.wrapper-slider-preview{
+  .wrapper-card-product-info_slider{
+    width: 100%;
+    margin-bottom: 60px;
+    margin-right: 0;
+    .gallery-top2{
+      width: 100%;
+      margin-bottom: 10px;
+      .swiper-slide{
+        img{
+          width: 100%;
+        }
+      }
+    }
+    .gallery-thumbs2{
+      .swiper-slide-active{
+        opacity: 1;
+        border: 3px solid #000;
+      }
+      .swiper-slide{
+        width: 10%;
+        height: 100%;
+        opacity: 1;
+        cursor: pointer;
+      }
+    }
+    .swiper-button-prev2{
+      background-image: none;
+      transform: rotate(180deg);
+      width: 9px;
+      height: 16px;
+      top: auto;
+      bottom: 25px;
+      left: -27px;
+      cursor: pointer;
+      position: absolute;
+      .st0 {
+        fill: #fff;
+      }
+    }
+    .swiper-button-next2{
+      background-image: none;
+      width: 9px;
+      height: 16px;
+      top: auto;
+      bottom: 25px;
+      right: -27px;
+      cursor: pointer;
+      position: absolute;
+      .st0 {
+        fill: #fff;
+      }
+    }
   }
 }

@@ -171,17 +171,15 @@ function initSliderProduct() {
         nextButton: '.swiper-button-next',
         prevButton: '.swiper-button-prev',
         spaceBetween: 10,
-        loop:true,
-        loopedSlides: 5,
     });
 
     var galleryThumbs = new Swiper('.gallery-thumbs', {
         spaceBetween: 15,
-        slidesPerView: 4,
+        slidesPerView: 'auto',
         touchRatio: 0.2,
-        loop:true,
-        loopedSlides: 5,
-        slideToClickedSlide: true
+        centeredSlides: true,
+        slideToClickedSlide: true,
+        freeMode: true
     });
     galleryTop.params.control = galleryThumbs;
     galleryThumbs.params.control = galleryTop;
@@ -552,6 +550,48 @@ function initStopSticky() {
     }
 }
 
+function initStickyCircle() {
+    $('.block-sticky').Stickyfill();
+}
+
+function initFancybox() {
+    $("[data-fancybox]").fancybox({
+        animationEffect: 'zoom-in-out'
+    });
+
+    var $links = $(".fancy").fancybox();
+
+    $links.on('click', function() {
+        initSliderProduct2();
+        return false;
+    });
+}
+
+function initSliderProduct2() {
+    var galleryTop2 = new Swiper('.gallery-top2', {
+        nextButton: '.swiper-button-next2',
+        prevButton: '.swiper-button-prev2',
+        spaceBetween: 10,
+    });
+
+    var galleryThumbs2 = new Swiper('.gallery-thumbs2', {
+        spaceBetween: 15,
+        slidesPerView: 'auto',
+        touchRatio: 0.2,
+        centeredSlides: true,
+        slideToClickedSlide: true,
+        freeMode: true
+    });
+    galleryTop2.params.control = galleryThumbs2;
+    galleryThumbs2.params.control = galleryTop2;
+}
+
+function initSticky() {
+    $(".block-sticky").stick_in_parent({
+        offset_top: 100,
+    });
+}
+
 
 $(document).ready(function() {
     initSetting();
@@ -577,4 +617,8 @@ $(document).ready(function() {
     initStopSticky();
     initAncour();
     scrollUp();
+    initStickyCircle();
+    initFancybox();
+    initSliderProduct2();
+    initSticky();
 });

@@ -2,6 +2,8 @@
 
 //=include lib/stickyfill.min.js
 
+//=include lib/sticky-kit.min.js
+
 //=include lib/masonry.pkgd.min.js
 
 //=include lib/fm.revealator.jquery.min.js
@@ -16,4 +18,6 @@
 //=include lib/sangarSlider2.js
 
 //=include lib/select2.min.js
+
+//=include lib/jquery.circliful.min.js
 
