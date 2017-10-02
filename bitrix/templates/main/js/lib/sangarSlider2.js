@@ -60,7 +60,7 @@
             base.old_responsive_class = 'responsive-full';
             base.responsiveClassLock = false;
             
-            base.lock(); // Lock slider before all content loaded            
+            base.lock(); // Lock slider before all content loaded
             base.$sangar.add(base.sangarWidth)
             base.$slides = base.$slideWrapper.children('div.sangar-content'); // Initialize slides
 
@@ -104,7 +104,7 @@
                     base.setupTimer();
                     base.setupDirectionalNav();
                     base.setupBulletNav();
-                    base.bulletObj = new base.setupSliderBulletNav();                    
+                    base.bulletObj = new base.setupSliderBulletNav();
                     base.setupSwipeTouch();
 
                     base.runSlideshow(); // run after all completely loaded
@@ -1088,7 +1088,9 @@ var sangarSetupBulletNav;
                         {
                             var paginationContent = typeof(opt.paginationContent[i]) != 'undefined' ? opt.paginationContent[i] : "";
                             var paginationImageAttr = typeof(opt.paginationImageAttr[i]) != 'undefined' ? opt.paginationImageAttr[i] : "";
-                            liMarkup = $('<li class="sangar-slideshow-nav-pagination"><div><img src="' + paginationContent + '" ' + paginationImageAttr + ' width="' + opt.paginationContentWidth + '" height="' + opt.paginationImageHeight + '"></div></li>');      
+                            liMarkup = $('<li class="sangar-slideshow-nav-pagination"><div><div class="circle-js">' +
+                                '<svg id="Layer_1" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 136 136"><path class="st0 YcEYVACE_0" d="M3 68a65 65 0 1 1 130 0A65 65 0 1 1 3 68"/></svg>' +
+                                '</div><img src="' + paginationContent + '" ' + paginationImageAttr + ' width="' + opt.paginationContentWidth + '" height="' + opt.paginationImageHeight + '"></div></li>');
                         }
                         break;
 

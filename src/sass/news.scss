@@ -101,6 +101,19 @@
     background-size: cover;
     background-position: center center;
     padding: 20px 15px;
+    position: relative;
+    &:before{
+      content: '';
+      position: absolute;
+      width: 100%;
+      height: 100%;
+      top: 0;
+      left: 0;
+      background-color: #74b7ea;
+      z-index: 1;
+      opacity: 0;
+      @include hover-img;
+    }
     .swiper-block-content-block-left{
       float: left;
       width: 50%;
@@ -316,6 +329,9 @@
     }
   }
   .block-img-news:before{
+    opacity: .4;
+  }
+  .swiper-block-content-img:before{
     opacity: .4;
   }
 }

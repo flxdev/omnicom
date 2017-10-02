@@ -237,7 +237,8 @@ function initSliderR() {
             },
             640: {
                 slidesPerView: 1,
-                spaceBetween: 20
+                spaceBetween: 20,
+                autoHeight: true
             }
         }
     });
@@ -274,7 +275,8 @@ function initSliderTimerBig() {
         fullHeight : true,
         disableLoading: true,
         pauseOnHover: false,
-        background: ''
+        background: '',
+        paginationExternalClass: 'sdcsdc'
     });
 }
 
@@ -357,7 +359,10 @@ function initSetting() {
 var globalSetting = [];
 
 
-if ($(window).width() < 1024) { initNoClass(); }
+if ($(window).width() < 1024) {
+    initNoClass();
+}
+
 $(window).on('resize', function() {
     if ($(window).width() < 1024) {
         initNoClass();
@@ -562,7 +567,28 @@ function initFancybox() {
     var $links = $(".fancy").fancybox();
 
     $links.on('click', function() {
-        initSliderProduct2();
+        var numberSlider = $(this).attr('data-index-img');
+        console.log(numberSlider);
+
+        var galleryTop2 = new Swiper('.gallery-top2', {
+            nextButton: '.swiper-button-next2',
+            prevButton: '.swiper-button-prev2',
+            spaceBetween: 10,
+            initialSlide: numberSlider
+        });
+
+        var galleryThumbs2 = new Swiper('.gallery-thumbs2', {
+            spaceBetween: 15,
+            slidesPerView: 'auto',
+            touchRatio: 0.2,
+            centeredSlides: true,
+            slideToClickedSlide: true,
+            freeMode: true,
+            initialSlide: numberSlider
+        });
+        galleryTop2.params.control = galleryThumbs2;
+        galleryThumbs2.params.control = galleryTop2;
+
         return false;
     });
 }
@@ -587,11 +613,16 @@ function initSliderProduct2() {
 }
 
 function initSticky() {
-    $(".block-sticky").stick_in_parent({
+    $(".block-sticky-s").stick_in_parent({
         offset_top: 100,
     });
 }
 
+function initCircleSmall() {
+    var searchClassO = $('.container-slider-timer-small > .circle-js');
+    console.log(searchClassO)
+    var circleClass = document.getElementsByClassName("sangar-pagination-active");
+}
 
 $(document).ready(function() {
     initSetting();
@@ -621,4 +652,5 @@ $(document).ready(function() {
     initFancybox();
     initSliderProduct2();
     initSticky();
+    initCircleSmall();
 });

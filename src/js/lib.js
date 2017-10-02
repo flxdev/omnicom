@@ -14,10 +14,12 @@
 
 //=include lib/jquery.touchSwipe.min.js
 //=include lib/imagesloaded.min.js
+
 //=include lib/sangarSlider.js
 //=include lib/sangarSlider2.js
 
 //=include lib/select2.min.js
 
 //=include lib/jquery.circliful.min.js
+
 

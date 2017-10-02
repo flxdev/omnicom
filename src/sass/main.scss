@@ -610,6 +610,9 @@ h1{
         .swiper-block-content-link, .swiper-block-content_title{
           color: #fb4614;
         }
+        .swiper-block-content-img:before{
+          opacity: .4;
+        }
       }
     }
     .swiper-block-content-img{
@@ -619,9 +622,24 @@ h1{
       background-position: center center;
       padding: 20px 15px;
       margin-bottom: 40px;
+      position: relative;
+      &:before{
+        content: '';
+        position: absolute;
+        width: 100%;
+        height: 100%;
+        top: 0;
+        left: 0;
+        background-color: #74b7ea;
+        z-index: 1;
+        opacity: 0;
+        @include hover-img;
+      }
       .swiper-block-content-block-left{
         float: left;
         width: 50%;
+        position: relative;
+        z-index: 1;
         .swiper-block-content-img_logo{
           width: 90%;
           img{
@@ -644,6 +662,8 @@ h1{
       .swiper-block-content-block-right{
         float: right;
         width: 33%;
+        position: relative;
+        z-index: 1;
         .swiper-block-content-img_rew{
           width: 100%;
           img{
@@ -702,6 +722,10 @@ h1{
   width: 100%;
   display: flex;
   position: relative;
+}
+
+.block-sticky-s{
+  height: 300px;
 }
 
 .wrapper-counter{
@@ -939,8 +963,78 @@ h1{
     right: auto;
   }
   .sangar-slideshow-container>.default ul.sangar-pagination-type-image>li.sangar-pagination-active>div:before{
-    border: 2px solid #ff4c0b;
-    border-radius: 50%;
+    content: '';
+    border: none;
+  }
+  .sangar-slideshow-container>.default ul.sangar-pagination-type-image>li.sangar-pagination-active>div>.circle-js{
+    display: block;
+    //background-image: url("../img/circle_animated.svg");
+    width: 65px;
+    height: 65px;
+    background-size: cover;
+    position: absolute;
+    background-repeat: no-repeat;
+    border: none;
+    svg{
+      width: 65px;
+      height: 65px;
+      background-size: cover;
+      background-repeat: no-repeat;
+      .YcEYVACE_0{
+        stroke-dasharray:409 411;
+        stroke-dashoffset:410;
+        animation:YcEYVACE_draw 6000ms linear 0ms forwards;
+      }
+      @keyframes YcEYVACE_draw{
+        100%{stroke-dashoffset:0;}
+      }
+      @keyframes YcEYVACE_fade{
+        0%{stroke-opacity:1;}
+        98.83720930232558%{stroke-opacity:1;}
+        100%{stroke-opacity:0;}
+      }
+    }
+  }
+  .sangar-timer{
+    display: none !important;
+  }
+  .sangar-slideshow-container>.default ul.sangar-pagination-type-image>li>div>.circle-js{
+    display: none;
+    //background-image: url("../img/circle_animated.svg");
+    width: 65px;
+    height: 65px;
+    background-size: cover;
+    position: absolute;
+    background-repeat: no-repeat;
+    border: none;
+    svg{
+      width: 65px;
+      height: 65px;
+      background-size: cover;
+      background-repeat: no-repeat;
+      .st0{
+        fill:none;
+        stroke:#F64224;
+        stroke-width:6;
+        stroke-miterlimit:10;
+      }
+      .YcEYVACE_0{
+        stroke-dasharray:409 411;
+        stroke-dashoffset:410;
+        animation:YcEYVACE_draw 6000ms linear 0ms forwards;
+      }
+      @keyframes YcEYVACE_draw{
+        100%{stroke-dashoffset:0;}
+      }
+      @keyframes YcEYVACE_fade{
+        0%{stroke-opacity:0;}
+        98.83720930232558%{stroke-opacity:0;}
+        100%{stroke-opacity:0;}
+      }
+    }
+  }
+  .sangar-slideshow-container .sangar-wrapper .sangar-pagination-type-image>li>div:before{
+    display: none;
   }
   .sangar-slideshow-container .sangar-wrapper .sangar-pagination-type-image>li>div{
     opacity: .4;
@@ -982,8 +1076,75 @@ h1{
     right: 50px;
   }
   .sangar-slideshow-container>.default ul.sangar-pagination-type-image>li.sangar-pagination-active>div:before{
-    border: 2px solid #ff4c0b;
-    border-radius: 50%;
+    content: '';
+    border: none;
+  }
+  .sangar-slideshow-container>.default ul.sangar-pagination-type-image>li.sangar-pagination-active>div>.circle-js{
+    display: block;
+    //background-image: url("../img/circle_animated.svg");
+    width: 65px;
+    height: 65px;
+    background-size: cover;
+    position: absolute;
+    background-repeat: no-repeat;
+    border: none;
+    svg{
+      width: 65px;
+      height: 65px;
+      background-size: cover;
+      background-repeat: no-repeat;
+      .YcEYVACE_0{
+        stroke-dasharray:409 411;
+        stroke-dashoffset:410;
+        animation:YcEYVACE_draw 6000ms linear 0ms forwards;
+      }
+      @keyframes YcEYVACE_draw{
+        100%{stroke-dashoffset:0;}
+      }
+      @keyframes YcEYVACE_fade{
+        0%{stroke-opacity:1;}
+        98.83720930232558%{stroke-opacity:1;}
+        100%{stroke-opacity:0;}
+      }
+    }
+  }
+  .sangar-timer{
+    display: none !important;
+  }
+  .sangar-slideshow-container>.default ul.sangar-pagination-type-image>li>div>.circle-js{
+    display: none;
+    //background-image: url("../img/circle_animated.svg");
+    width: 65px;
+    height: 65px;
+    background-size: cover;
+    position: absolute;
+    background-repeat: no-repeat;
+    border: none;
+    svg{
+      width: 65px;
+      height: 65px;
+      background-size: cover;
+      background-repeat: no-repeat;
+      .st0{
+        fill:none;
+        stroke:#F64224;
+        stroke-width:6;
+        stroke-miterlimit:10;
+      }
+      .YcEYVACE_0{
+        stroke-dasharray:409 411;
+        stroke-dashoffset:410;
+        animation:YcEYVACE_draw 6000ms linear 0ms forwards;
+      }
+      @keyframes YcEYVACE_draw{
+        100%{stroke-dashoffset:0;}
+      }
+      @keyframes YcEYVACE_fade{
+        0%{stroke-opacity:0;}
+        98.83720930232558%{stroke-opacity:0;}
+        100%{stroke-opacity:0;}
+      }
+    }
   }
   .sangar-slideshow-container .sangar-wrapper .sangar-pagination-type-image>li>div{
     opacity: .4;
@@ -1694,7 +1855,14 @@ h1{
       }
     }
     .gallery-thumbs2{
+      .swiper-wrapper{
+        margin-left:calc(-40% - 20px);
+      }
       .swiper-slide-active{
+        opacity: 1;
+        border: 3px solid #000;
+      }
+      .swiper-slide.is-selected{
         opacity: 1;
         border: 3px solid #000;
       }

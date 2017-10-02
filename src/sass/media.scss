@@ -535,12 +535,38 @@
   }
   .wrapper-counter{
     width: 100%;
+    position: absolute;
+    height: 100%;
     .block-counter{
-      width: 240px;
-      height: 239px;
+      width: 70px;
+      height: 70px;
       padding: 75px 20px 0;
       margin: 0 auto 40px auto;
+      border-radius: 50%;
+      background: white;
+      float: right;
+      .block-clock{
+        width: 100%;
+        position: absolute;
+        top: 0;
+        left: auto;
+        right: 0;
+      }
+      .block-counter_percent{
+        font-family: EtelkaLight;
+        font-size: 23px;
+        color: #002855;
+        position: absolute;
+        top: 24px;
+        left: 15px;
+      }
     }
+  }
+  .block-counter_txt{
+    display: none;
+  }
+  .block-sticky-s {
+    height: 80px;
   }
   .wrapper-content-text{
     width: 100%;
@@ -657,6 +683,29 @@
     width: 100%;
     padding: 15px 20px;
   }
+
+  .wrapper-slider-timer-small{
+    height: auto;
+    .sangar-content_txt{
+      width: 100%;
+      padding: 20px 20px;
+      .sangar-content_title{
+        font-size: 15px;
+        margin-bottom: 20px;
+      }
+      .sangar-content_text{
+        font-size: 15px;
+        width: 90%;
+      }
+    }
+    .sangar-slideshow-container{
+      .sangar-pagination-wrapper.wrapper-content-horizontal{
+        bottom: 10px;
+        left: 15px;
+        right: auto;
+      }
+    }
+  }
 }
 
 .container-top-block_icon-mobile{
@@ -717,6 +766,9 @@
     background-size: cover;
     background-repeat: no-repeat;
     margin-left: 15px;
+    img{
+      width: 100%;
+    }
   }
   .footer-wrapper-bottom{
     .footer-wrapper_logo-dealer{
@@ -1075,8 +1127,14 @@
       padding-top: 180px;
     }
   }
-  .container-main-big .sangar-slideshow-container .sangar-pagination-wrapper.wrapper-content-horizontal{
-    bottom: 30px
+  .container-main-big{
+    .sangar-slideshow-container{
+      .sangar-pagination-wrapper.wrapper-content-horizontal{
+        bottom: 10px;
+        left: 0;
+        right: 0;
+      }
+    }
   }
   .block-outline1{
     text-align: center;
@@ -1204,6 +1262,83 @@
       }
       .wrapper-final-result_box:nth-child(2n){
         width: 100%;
+      }
+    }
+  }
+
+  .wrapper-content-slider{
+    .h1{
+      font-size: 30px;
+    }
+    .h1+.btn-form{
+      padding: 15px 20px;
+    }
+  }
+
+  .white-img{
+    .wrapper-content-slider{
+      .h1{
+        font-size: 30px;
+      }
+    }
+  }
+
+  .wrapper-ordering-advantage_list{
+    .revealator-slideright{
+      transform: translate(0);
+      opacity: 1;
+    }
+  }
+
+  .wrapper-advantage-btn_blue.current-f{
+    padding: 6px 16px;
+  }
+  .footer-wrapper-bottom{
+    .footer-wrapper_logo-dealer{
+      .footer-wrapper_logo{
+        margin-right: 11px;
+        font-size: 13px;
+      }
+      .footer-wrapper_dealer{
+        padding-left: 13px;
+      }
+    }
+  }
+  .wrapper-main{
+    padding: 25px 15px 15px;
+  }
+  .wrapper-slider-timer-small{
+    height: 400px;
+  }
+
+  .block-wrapper-title_title-bread-crumbs{
+    .bread-crumbs a:first-child:before{
+      display: none;
+    }
+  }
+
+  .wrapper-card-product_left{
+    .block-sticky{
+      position: relative !important;
+      top: 0;
+      margin-bottom: 0 !important;
+    }
+  }
+
+  .wrapper-card-product_left-menu{
+    margin-bottom: 25px;
+  }
+
+  .wrapper-box-link{
+    ul{
+      li{
+        width: 100%;
+        display: block;
+        margin-bottom: 15px;
+        a{
+          display: block;
+          text-align: center;
+        }
       }
     }
   }

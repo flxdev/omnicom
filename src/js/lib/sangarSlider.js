@@ -437,7 +437,7 @@ var sangarBaseClass;
         {
             var element = document.createElement('div'),
                 props = [ 'perspectiveProperty', 'WebkitPerspective', 'MozPerspective', 'OPerspective', 'msPerspective' ];
-            
+
             for ( var i in props ) {
                 if ( typeof element.style[ props[ i ] ] !== 'undefined' ) {
                     base.vendorPrefix = props[i].replace('Perspective', '').toLowerCase();
@@ -1088,7 +1088,7 @@ var sangarSetupBulletNav;
                         {
                             var paginationContent = typeof(opt.paginationContent[i]) != 'undefined' ? opt.paginationContent[i] : "";
                             var paginationImageAttr = typeof(opt.paginationImageAttr[i]) != 'undefined' ? opt.paginationImageAttr[i] : "";
-                            liMarkup = $('<li class="sangar-slideshow-nav-pagination"><div><img src="' + paginationContent + '" ' + paginationImageAttr + ' width="' + opt.paginationContentWidth + '" height="' + opt.paginationImageHeight + '"></div></li>');      
+                            liMarkup = $('<li class="sangar-slideshow-nav-pagination"><div><img src="' + paginationContent + '" ' + paginationImageAttr + ' width="' + opt.paginationContentWidth + '" height="' + opt.paginationImageHeight + '"></div></li>');
                         }
                         break;
 
