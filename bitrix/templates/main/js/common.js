@@ -515,7 +515,6 @@ function initAncour() {
             scrollTop: destination
         }, 800);
         $('.js-name').focus();
-
     });
 }
 
@@ -624,6 +623,43 @@ function initCircleSmall() {
     var circleClass = document.getElementsByClassName("sangar-pagination-active");
 }
 
+function initCirclePercentages() {
+    if($('#word').length){
+        function pathPrepare ($el) {
+            var lineLength = $el[0].getTotalLength();
+            $el.css("stroke-dasharray", lineLength);
+            $el.css("stroke-dashoffset", lineLength);
+        }
+
+        var $word = $("path#word");
+        var $dot = $("path#dot");
+
+        var heightBlock = $('.wrapper-counter').height();
+
+        // prepare SVG
+        pathPrepare($word);
+        pathPrepare($dot);
+        // init controller
+        var controller = new ScrollMagic.Controller();
+
+        // build tween
+        var tween = new TimelineMax()
+            .add(TweenMax.to($dot, 0, {strokeDashoffset: 0, ease:Linear.easeNone}))
+            .add(TweenMax.to($word, 2, {strokeDashoffset: 845, ease:Linear.easeNone}))
+            .add(TweenMax.to("path", 1, {stroke: "#002855", ease:Linear.easeNone}), 0);
+
+        // build scene
+        var scene = new ScrollMagic.Scene({triggerElement: "#trigger1", duration: heightBlock, tweenChanges: true})
+            .setTween(tween)
+            .addIndicators() // add indicators (requires plugin)
+            .addTo(controller)
+            .on("progress", function (e) {
+                $("#progress").text(e.progress.toFixed(1)*100 + '%');
+            });
+
+    }
+}
+
 $(document).ready(function() {
     initSetting();
     initMenu();
@@ -653,4 +689,5 @@ $(document).ready(function() {
     initSliderProduct2();
     initSticky();
     initCircleSmall();
+    initCirclePercentages();
 });

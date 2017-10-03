@@ -5266,8 +5266,6 @@ h1 {
       position: absolute;
       top: 0;
       left: 0; }
-      .wrapper-counter .block-counter .block-clock .st0 {
-        fill: #002855; }
 
 .wrapper-content-text {
   -webkit-align-content: stretch;
@@ -6309,7 +6307,8 @@ h1 {
   .block-map-site .st0 {
     fill: #002855;
     -webkit-transition: all 0.5s ease-out;
-    transition: all 0.5s ease-out; }
+    transition: all 0.5s ease-out;
+    stroke: initial !important; }
   .block-map-site:hover .st0 {
     fill: #fb4614; }
 
@@ -6737,7 +6736,8 @@ h1 {
         margin-right: 5px; }
         .footer-wrapper-bottom .footer-wrapper_logo-dealer .footer-wrapper_dealer .icon-dealer svg {
           width: 30px;
-          height: 30px; }
+          height: 30px;
+          stroke: initial !important; }
       .footer-wrapper-bottom .footer-wrapper_logo-dealer .footer-wrapper_dealer .dealer-txt {
         font-family: "EtelkaLight";
         display: inline-block;
@@ -9493,6 +9493,8 @@ body .select2-results__option {
       .block-header-logo_txt .block-header-logo_dealer .icon-dealer svg {
         width: 100%;
         height: 100%; }
+        .block-header-logo_txt .block-header-logo_dealer .icon-dealer svg path {
+          stroke: initial !important; }
     .block-header-logo_txt .block-header-logo_dealer .dealer-txt {
       font-family: 'EtelkaWideMedium';
       display: inline-block;
@@ -9523,7 +9525,11 @@ body .select2-results__option {
   .wrapper-content-slider .wrapper-content-slider_text{
     margin-right: 37%; }
   .block-header-menu nav .menu_categories li a{
-    padding: 31px 15px 30px; } }
+    padding: 31px 15px 30px; }
+  .container-slider-text .slider-text_logo-dealer{
+    margin-bottom: 20px; }
+  .container-slider-text p{
+    line-height: 1.4; } }
     @media all and (max-width: 1281px){
   .wrapper-content-slider h1{
     color: #fff;
@@ -9823,7 +9829,9 @@ body .select2-results__option {
     color: #002855;
     position: absolute;
     top: 24px;
-    left: 15px; }
+    left: 0;
+    width: 100%;
+    text-align: center; }
   .block-counter_txt{
     display: none; }
   .block-sticky-s{

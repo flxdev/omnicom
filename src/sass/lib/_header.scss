@@ -79,6 +79,7 @@
   .st0{
     fill: #002855;
     @include hover-time-all;
+    stroke: initial !important;
   }
   &:hover{
     .st0{

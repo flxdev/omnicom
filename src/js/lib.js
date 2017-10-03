@@ -22,4 +22,11 @@
 
 //=include lib/jquery.circliful.min.js
 
+// GreenSock
+//=include lib/greensock/TweenMax.min.js
+//=include lib/greensock/ScrollMagic.js
+//=include lib/greensock/animation.gsap.js
+//=include lib/greensock/debug.addIndicators.js
+
+
 
